@@ -163,7 +163,7 @@ Có 3 thành phần quan trọng cấu hình lên RxSwift
 
 ---
 
-##**App architecture**
+## **App architecture**
 
 - Với kiến trúc project thì RxSwift không gây ra ảnh hưởng nào
 - Các mô hình MVC, MVP hay MVVM thì không bị thay đổi khi thêm RxSwift vào

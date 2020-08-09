@@ -7,8 +7,7 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 * Contact: lephuongtien.dev@gmail.com
 
 ---
-
-##Danh sách các bài tìm hiểu:
+## Danh sách các bài tìm hiểu:
 
 1. [Giới thiệu](./_Docs/01_GioiThieu.md)
 2. ...
