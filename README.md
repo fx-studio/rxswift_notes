@@ -10,7 +10,7 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 ## Danh sách các bài tìm hiểu:
 
 1. [Giới thiệu](./_Docs/01_GioiThieu.md)
-2. ...
+2. [Hello RxSwift](./_Docs/02_HelloRxSwift.md)
 3. 
 
 ---
