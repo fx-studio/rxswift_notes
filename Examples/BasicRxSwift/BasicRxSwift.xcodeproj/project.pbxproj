@@ -30,6 +30,7 @@
 		9E8271FC24DFFD5D00566D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E8271FE24DFFD5D00566D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E82720424DFFEDE00566D4E /* HelloRx.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HelloRx.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9EF7736A24E250DF00CEFCE9 /* Observables.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observables.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CC5B211EEA9EC719146C8C44 /* Pods-BasicRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRxSwift.release.xcconfig"; path = "Target Support Files/Pods-BasicRxSwift/Pods-BasicRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				9E82720424DFFEDE00566D4E /* HelloRx.playground */,
+				9EF7736A24E250DF00CEFCE9 /* Observables.playground */,
 				9E8271EF24DFFD5B00566D4E /* BasicRxSwift */,
 				9E8271EE24DFFD5B00566D4E /* Products */,
 				060B78E8989B55FFA66D5D13 /* Pods */,

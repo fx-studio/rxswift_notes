@@ -11,7 +11,8 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 
 1. [Giới thiệu](./_Docs/01_GioiThieu.md)
 2. [Hello RxSwift](./_Docs/02_HelloRxSwift.md)
-3. 
+3. [Observables](./_Docs/03_Observables.md)
+4. 
 
 ---
 
