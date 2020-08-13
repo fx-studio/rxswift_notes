@@ -15,7 +15,11 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 4. [DisposeBag](./_Docs/04_DisposeBag.md)
 5. [Observable factory](./_Docs/05_Factory.md)
 6. [Traits](./_Docs/06_Traits.md)
-7. 
+7. [Subjects](./_Docs/07_Subjects.md)
+   8. [Publish Subjects](./_Docs/071_PublishSubjects.md)
+   2. [Behavior Subjects](./_Docs/072_BehaviorSubjects.md)
+   3. [Replay Subjects](./_Docs/073_ReplaySubjects.md)
+   4. [Relays](./_Docs/074_Relays.md)
 8. 
 
 ---
