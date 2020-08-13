@@ -21,6 +21,7 @@
 		2883B6787E7A8140A3E15B95 /* Pods_BasicRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F38075EE5F477ED74506775 /* Pods-BasicRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-BasicRxSwift/Pods-BasicRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		9E2B625A24E000F50020698A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9E6C192724E4C3C300A19DE6 /* DisposeBag.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DisposeBag.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E8271ED24DFFD5B00566D4E /* BasicRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8271F024DFFD5B00566D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E8271F224DFFD5B00566D4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 			children = (
 				9E82720424DFFEDE00566D4E /* HelloRx.playground */,
 				9EF7736A24E250DF00CEFCE9 /* Observables.playground */,
+				9E6C192724E4C3C300A19DE6 /* DisposeBag.playground */,
 				9E8271EF24DFFD5B00566D4E /* BasicRxSwift */,
 				9E8271EE24DFFD5B00566D4E /* Products */,
 				060B78E8989B55FFA66D5D13 /* Pods */,
