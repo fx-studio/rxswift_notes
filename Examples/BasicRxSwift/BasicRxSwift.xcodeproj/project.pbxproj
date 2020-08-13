@@ -23,6 +23,7 @@
 		9E2B625A24E000F50020698A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9E6C192724E4C3C300A19DE6 /* DisposeBag.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DisposeBag.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E6C192824E4E6EE00A19DE6 /* Factories.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factories.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9E6C192924E4F5DD00A19DE6 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E8271ED24DFFD5B00566D4E /* BasicRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8271F024DFFD5B00566D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E8271F224DFFD5B00566D4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 				9EF7736A24E250DF00CEFCE9 /* Observables.playground */,
 				9E6C192724E4C3C300A19DE6 /* DisposeBag.playground */,
 				9E6C192824E4E6EE00A19DE6 /* Factories.playground */,
+				9E6C192924E4F5DD00A19DE6 /* Traits.playground */,
 				9E8271EF24DFFD5B00566D4E /* BasicRxSwift */,
 				9E8271EE24DFFD5B00566D4E /* Products */,
 				060B78E8989B55FFA66D5D13 /* Pods */,
