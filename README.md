@@ -13,7 +13,8 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 2. [Hello RxSwift](./_Docs/02_HelloRxSwift.md)
 3. [Observables](./_Docs/03_Observables.md)
 4. [DisposeBag](./_Docs/04_DisposeBag.md)
-5. 
+5. [Observable factory](./_Docs/05_Factory.md)
+6. 
 
 ---
 
