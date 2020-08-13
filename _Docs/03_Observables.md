@@ -236,7 +236,7 @@ Cách mà bạn có 1 vòng for đơn giản. Observable này lần lượt phá
 
 ---
 
-###Tóm tắt
+### Tóm tắt
 
 * Observable là nguồn phát dữ liệu
 * Sequence, Observable Sequence hay Stream đều mang ý nghĩa giống nhau

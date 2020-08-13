@@ -2,7 +2,7 @@
 
 > Điểm nguy hiểm nhất khi sử dụng RxSwift (hay Reactive Programming) là việc quản lý bộ nhớ không được tối ưu. Khi quá nhiều nguồn phát và quá nhiều đối tượng lắng nghe tới các nguồn phát đó, thì bạn có dám chắc rằng bạn đã giải phóng tất cả các đối tượng hay không.
 
-###Dispose
+### Dispose
 
 Khi một Observable được tạo ra, thì nó sẽ không hoạt động hay hành động gì cho tới khi có 1 subscribe đăng ký tới. Việc subscribe khi đăng ký tới thì gọi là `subscription`. Lúc đó thì sẽ kích hoạt observable (hay gọi là `trigger`) bắt đi các giá trị của mình. Việc này cứ lặp đi lặp lại miết cho đến khi phát ra `.error` hoặc `.completed`.
 
