@@ -1,4 +1,4 @@
-# DisposeBag (Túi rác quốc dân)
+# 04 DisposeBag (Túi rác quốc dân)
 
 > Điểm nguy hiểm nhất khi sử dụng RxSwift (hay Reactive Programming) là việc quản lý bộ nhớ không được tối ưu. Khi quá nhiều nguồn phát và quá nhiều đối tượng lắng nghe tới các nguồn phát đó, thì bạn có dám chắc rằng bạn đã giải phóng tất cả các đối tượng hay không.
 
