@@ -54,3 +54,37 @@ example(of: "Publish Subject") {
     }
     .disposed(by: disposeBag)
 }
+
+example(of: "Behavior Subject") {
+    let disposeBag = DisposeBag()
+    
+    enum MyError: Error {
+      case anError
+    }
+    
+    let subject = BehaviorSubject(value: "0")
+    
+    //Subscribe 1
+    subject .subscribe {
+        print("🔵 ", $0)
+      }
+    .disposed(by: disposeBag)
+    
+    // emit
+    subject.onNext("1")
+    
+    //Subscribe 2
+    subject .subscribe {
+        print("🔴 ", $0)
+      }
+    .disposed(by: disposeBag)
+    
+    // error
+    subject.onError(MyError.anError)
+    
+    //Subscribe 3
+    subject .subscribe {
+        print("🟠 ", $0)
+      }
+    .disposed(by: disposeBag)
+}
