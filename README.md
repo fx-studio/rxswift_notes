@@ -15,12 +15,17 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 4. [DisposeBag](./_Docs/04_DisposeBag.md)
 5. [Observable factory](./_Docs/05_Factory.md)
 6. [Traits](./_Docs/06_Traits.md)
-7. [Subjects](./_Docs/07_Subjects.md)
-   * [Publish Subjects](./_Docs/071_PublishSubjects.md) 
-   * [Behavior Subjects](./_Docs/072_BehaviorSubjects.md)
-   * [Replay Subjects](./_Docs/073_ReplaySubjects.md)
-   * [Relays](./_Docs/074_Relays.md)
-8. 
+7. [Subjects](./_Docs/07_0_Subjects.md)
+   * [Publish Subjects](./_Docs/07_1_PublishSubjects.md) 
+   * [Behavior Subjects](./_Docs/07_2_BehaviorSubjects.md)
+   * [Replay Subjects](./_Docs/07_3_ReplaySubjects.md)
+   * [Relays](./_Docs/07_4_Relays.md)
+8. [Hello UIKit](./_Docs/08_0_HelloUIKit.md) 
+   * [Hello ViewController](./_Docs/08_1_HelloViewController.md)
+   * [Talking a other ViewController](./_Docs/08_2_TalkingOtherVC.md)
+   * [Custom Observable](./_Docs/08_3_CustomObservable.md)
+9. 
+10. 
 
 ---
 

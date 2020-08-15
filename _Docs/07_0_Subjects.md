@@ -70,11 +70,11 @@ Vâng, chúng ta đã xong phần tìm hiểu ban đầu Subject là gì rồi.
 
 Trong RxSwift, chúng ta có 4 loại Subject với các cách thức hoạt động khác nhau, bao gồm:
 
-- **[PublishSubject](071_PublishSubjects.md)**: Khởi đầu "empty" và chỉ emit các element mới cho subscriber của nó.
-- [**BehaviorSubject**](072_BehaviorSubjects.md): Khởi đầu với một giá trí khởi tạo và sẽ relay lại element cuối cùng của chuỗi cho Subscriber mới.
-- [**ReplaySubject**](073_ReplaySubjects.md): Khởi tạo với một kích thước bộ đệm cố định, sau đó sẽ lưu trữ các element gần nhất vào bộ đệm này và relay lại các element chứa trong bộ đệm cho một Subscriber mới.
+- **[PublishSubject](07_1_PublishSubjects.md)**: Khởi đầu "empty" và chỉ emit các element mới cho subscriber của nó.
+- [**BehaviorSubject**](07_2_BehaviorSubjects.md): Khởi đầu với một giá trí khởi tạo và sẽ relay lại element cuối cùng của chuỗi cho Subscriber mới.
+- [**ReplaySubject**](07_3_ReplaySubjects.md): Khởi tạo với một kích thước bộ đệm cố định, sau đó sẽ lưu trữ các element gần nhất vào bộ đệm này và relay lại các element chứa trong bộ đệm cho một Subscriber mới.
 - **AsyncSubject**: Chỉ phát ra sự kiện `.next` cuối cùng trong chuỗi và chỉ khi subject nhận được `.completed`. Cái này ít được sử dụng, nên chắc skip và hẹn ở một thời gian sau.
-- [**PublishRelay** & **BehaviorRelay**](074_Relays.md) : là các subject được bọc lại (wrap), nhưng chúng chỉ chấp nhận `.next`. Bạn không thể thêm các `.error` hay `.completed`. Vì vậy chúng thích hợp cho các sự kiện không bao giờ kết thúc.
+- [**PublishRelay** & **BehaviorRelay**](07_4_Relays.md) : là các subject được bọc lại (wrap), nhưng chúng chỉ chấp nhận `.next`. Bạn không thể thêm các `.error` hay `.completed`. Vì vậy chúng thích hợp cho các sự kiện không bao giờ kết thúc.
 
 Cụ thể các loại Subject này hoạt động như thế nào thì chúng ta sẽ tìm hiểu ở các phần sau.
 
