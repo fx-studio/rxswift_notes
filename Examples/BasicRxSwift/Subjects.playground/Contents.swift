@@ -88,3 +88,42 @@ example(of: "Behavior Subject") {
       }
     .disposed(by: disposeBag)
 }
+
+example(of: "Replay Subject") {
+    let disposeBag = DisposeBag()
+    enum MyError: Error {
+      case anError
+    }
+    
+    //let subject = ReplaySubject<String>.create(bufferSize: 2)
+    let subject = ReplaySubject<String>.createUnbounded()
+    
+    // emit
+    subject.onNext("1")
+    subject.onNext("2")
+    subject.onNext("3")
+    
+    // subcribe 1
+    subject
+      .subscribe { print("🔵 ", $0) }
+      .disposed(by: disposeBag)
+    
+    // emit
+    subject.onNext("4")
+    
+    // subcribe 2
+    subject
+      .subscribe { print("🔴 ", $0) }
+      .disposed(by: disposeBag)
+    
+    // error
+    subject.onError(MyError.anError)
+    
+    // dispose
+    //subject.dispose()
+    
+    // subcribe 3
+    subject
+      .subscribe { print("🟠 ", $0) }
+      .disposed(by: disposeBag)
+}
