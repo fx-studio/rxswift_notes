@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 example(of: "Subjects") {
     let subject = PublishSubject<String>()
@@ -126,4 +127,64 @@ example(of: "Replay Subject") {
     subject
       .subscribe { print("🟠 ", $0) }
       .disposed(by: disposeBag)
+}
+
+example(of: "Publish Relay") {
+    let disposeBag = DisposeBag()
+    enum MyError: Error {
+      case anError
+    }
+    
+    let publishRelay = PublishRelay<String>()
+    
+    publishRelay.accept("0")
+    
+    // subcribe 1
+    publishRelay
+      .subscribe { print("🔵 ", $0) }
+      .disposed(by: disposeBag)
+    
+    publishRelay.accept("1")
+    publishRelay.accept("2")
+    publishRelay.accept("3")
+    
+    // subcribe 2
+    publishRelay
+      .subscribe { print("🔴 ", $0) }
+      .disposed(by: disposeBag)
+    
+    publishRelay.accept("4")
+    
+//    publishRelay.accept(MyError.anError)
+//    publishRelay.onCompleted()
+}
+
+example(of: "Behavior Relay") {
+    let disposeBag = DisposeBag()
+    enum MyError: Error {
+      case anError
+    }
+    
+    let behaviorRelay = BehaviorRelay<String>(value: "0")
+    
+    behaviorRelay.accept("0")
+    
+    // subcribe 1
+    behaviorRelay
+      .subscribe { print("🔵 ", $0) }
+      .disposed(by: disposeBag)
+    
+    behaviorRelay.accept("1")
+    behaviorRelay.accept("2")
+    behaviorRelay.accept("3")
+    
+    // subcribe 2
+    behaviorRelay
+      .subscribe { print("🔴 ", $0) }
+      .disposed(by: disposeBag)
+    
+    behaviorRelay.accept("4")
+    
+    // current value
+    print("Current value: \(behaviorRelay.value)")
 }
