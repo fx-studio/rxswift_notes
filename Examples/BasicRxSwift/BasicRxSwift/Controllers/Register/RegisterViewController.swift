@@ -58,8 +58,17 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func changeAvatar() {
-        let img = UIImage(named: "avatar_1")
-        image.accept(img)
+        let vc = ChangeAvatarViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        //subscribe
+        vc.selectedPhotos
+            .subscribe(onNext: { img in
+                self.image.accept(img)
+            }, onDisposed: {
+                print("Complete changed Avatar")
+            })
+        .disposed(by: bag)
     }
     
 }

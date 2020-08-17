@@ -13,6 +13,10 @@
 		9E8271F324DFFD5B00566D4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8271F224DFFD5B00566D4E /* SceneDelegate.swift */; };
 		9E8271FA24DFFD5D00566D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8271F924DFFD5D00566D4E /* Assets.xcassets */; };
 		9E8271FD24DFFD5D00566D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8271FB24DFFD5D00566D4E /* LaunchScreen.storyboard */; };
+		9E85ED4124EAB9DC002EBED8 /* ChangeAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E85ED3F24EAB9DC002EBED8 /* ChangeAvatarViewController.swift */; };
+		9E85ED4224EAB9DC002EBED8 /* ChangeAvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E85ED4024EAB9DC002EBED8 /* ChangeAvatarViewController.xib */; };
+		9E85ED4624EABA73002EBED8 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E85ED4424EABA73002EBED8 /* AvatarCell.swift */; };
+		9E85ED4724EABA73002EBED8 /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E85ED4524EABA73002EBED8 /* AvatarCell.xib */; };
 		9EE3D38C24E7D7D900B70216 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3D38A24E7D7D900B70216 /* RegisterViewController.swift */; };
 		9EE3D38D24E7D7D900B70216 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3D38B24E7D7D900B70216 /* RegisterViewController.xib */; };
 /* End PBXBuildFile section */
@@ -32,6 +36,10 @@
 		9E8271FC24DFFD5D00566D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E8271FE24DFFD5D00566D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E82720424DFFEDE00566D4E /* HelloRx.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HelloRx.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9E85ED3F24EAB9DC002EBED8 /* ChangeAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAvatarViewController.swift; sourceTree = "<group>"; };
+		9E85ED4024EAB9DC002EBED8 /* ChangeAvatarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeAvatarViewController.xib; sourceTree = "<group>"; };
+		9E85ED4424EABA73002EBED8 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		9E85ED4524EABA73002EBED8 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
 		9EE3D38A24E7D7D900B70216 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9EE3D38B24E7D7D900B70216 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		9EF7736A24E250DF00CEFCE9 /* Observables.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observables.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -120,6 +128,25 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		9E85ED3E24EAB9B6002EBED8 /* ChangeAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				9E85ED4324EABA4D002EBED8 /* Cell */,
+				9E85ED3F24EAB9DC002EBED8 /* ChangeAvatarViewController.swift */,
+				9E85ED4024EAB9DC002EBED8 /* ChangeAvatarViewController.xib */,
+			);
+			path = ChangeAvatar;
+			sourceTree = "<group>";
+		};
+		9E85ED4324EABA4D002EBED8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9E85ED4424EABA73002EBED8 /* AvatarCell.swift */,
+				9E85ED4524EABA73002EBED8 /* AvatarCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9EE3D38724E7D77300B70216 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +159,7 @@
 		9EE3D38824E7D7B100B70216 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E85ED3E24EAB9B6002EBED8 /* ChangeAvatar */,
 				9EE3D38924E7D7BF00B70216 /* Register */,
 			);
 			path = Controllers;
@@ -208,7 +236,9 @@
 			files = (
 				9E8271FD24DFFD5D00566D4E /* LaunchScreen.storyboard in Resources */,
 				9E8271FA24DFFD5D00566D4E /* Assets.xcassets in Resources */,
+				9E85ED4724EABA73002EBED8 /* AvatarCell.xib in Resources */,
 				9EE3D38D24E7D7D900B70216 /* RegisterViewController.xib in Resources */,
+				9E85ED4224EAB9DC002EBED8 /* ChangeAvatarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E8271F124DFFD5B00566D4E /* AppDelegate.swift in Sources */,
+				9E85ED4124EAB9DC002EBED8 /* ChangeAvatarViewController.swift in Sources */,
 				9E8271F324DFFD5B00566D4E /* SceneDelegate.swift in Sources */,
 				9E2B625B24E000F50020698A /* Helper.swift in Sources */,
+				9E85ED4624EABA73002EBED8 /* AvatarCell.swift in Sources */,
 				9EE3D38C24E7D7D900B70216 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
