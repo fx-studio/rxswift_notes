@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class RegisterViewController: UIViewController {
     
@@ -17,12 +19,24 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     
+    // MARK: Properties
+    var avatartIndex = 0
+    private let bag = DisposeBag()
+    private let image = BehaviorRelay<UIImage?>(value: nil)
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Register"
         
         configUI()
+        
+        //subscription
+        image.asObservable()
+            .subscribe(onNext: { img in
+                self.avatarImageView.image = img
+            })
+            .disposed(by: bag)
     }
     
     // MARK: Config
@@ -44,7 +58,8 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func changeAvatar() {
-        
+        let img = UIImage(named: "avatar_1")
+        image.accept(img)
     }
     
 }
