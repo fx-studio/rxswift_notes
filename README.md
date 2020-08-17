@@ -22,7 +22,7 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
    * [Relays](./_Docs/07_4_Relays.md)
 8. [Hello UIKit](./_Docs/08_0_HelloUIKit.md) 
    * [Hello ViewController](./_Docs/08_1_HelloViewController.md)
-   * [Talking a other ViewController](./_Docs/08_2_TalkingOtherVC.md)
+   * [Talking to other ViewController](./_Docs/08_2_TalkingOtherVC.md)
    * [Custom Observable](./_Docs/08_3_CustomObservable.md)
 9. 
 10. 
