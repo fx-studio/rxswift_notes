@@ -9,6 +9,10 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 ---
 ## Danh sách các bài tìm hiểu:
 
+
+
+#### **Phần 1: Basic RxSwift**
+
 1. [Giới thiệu](./_Docs/01_GioiThieu.md)
 2. [Hello RxSwift](./_Docs/02_HelloRxSwift.md)
 3. [Observables](./_Docs/03_Observables.md)
@@ -24,8 +28,18 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
    * [Hello ViewController](./_Docs/08_1_HelloViewController.md)
    * [Talking to other ViewController](./_Docs/08_2_TalkingOtherVC.md)
    * [Custom Observable](./_Docs/08_3_CustomObservable.md)
-9. 
-10. 
+
+#### **Phần 2 : [Operators](./_Docs/09_0_Operators.md)**
+
+1. [Filtering Operators](./_Docs/09_1_Filtering_Operators.md)
+2. [Transforming Operators](./_Docs/09_2_Transforming_Operators.md)
+3. [Combining Operators](./_Docs/09_3_Combining_Operators.md)
+4. [Time-Based Operators](./_Docs/09_4_TimeBased_Operators.md)
+
+#### **Phần 3 : Basic RxCocoa**
+
+1. 
+2. 
 
 ---
 

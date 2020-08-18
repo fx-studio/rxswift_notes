@@ -46,8 +46,8 @@ class RegisterViewController: UIViewController {
         avatarImageView.layer.borderColor = UIColor.gray.cgColor
         avatarImageView.layer.masksToBounds = true
         
-        let leftBarButton = UIBarButtonItem(title: "Change Avatar", style: .plain, target: self, action: #selector(self.changeAvatar))
-        self.navigationItem.leftBarButtonItem = leftBarButton
+        let rightBarButtonItem = UIBarButtonItem(title: "Change Avatar", style: .plain, target: self, action: #selector(self.changeAvatar))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
     // MARK: Actions

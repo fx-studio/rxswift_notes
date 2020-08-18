@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1BB599C3E09A54A62BA46DE7 /* Pods_BasicRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2883B6787E7A8140A3E15B95 /* Pods_BasicRxSwift.framework */; };
 		9E2B625B24E000F50020698A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B625A24E000F50020698A /* Helper.swift */; };
+		9E2D810924EC197D0035F10B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D810724EC197D0035F10B /* BaseViewController.swift */; };
+		9E2D810A24EC197D0035F10B /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D810824EC197D0035F10B /* BaseViewController.xib */; };
 		9E8271F124DFFD5B00566D4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8271F024DFFD5B00566D4E /* AppDelegate.swift */; };
 		9E8271F324DFFD5B00566D4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8271F224DFFD5B00566D4E /* SceneDelegate.swift */; };
 		9E8271FA24DFFD5D00566D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8271F924DFFD5D00566D4E /* Assets.xcassets */; };
@@ -25,7 +27,13 @@
 /* Begin PBXFileReference section */
 		2883B6787E7A8140A3E15B95 /* Pods_BasicRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F38075EE5F477ED74506775 /* Pods-BasicRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-BasicRxSwift/Pods-BasicRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		9E1D186924EC172E00D43A85 /* Filtering_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filtering_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9E1D186A24EC17A900D43A85 /* Transforming_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Transforming_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9E1D186B24EC17F600D43A85 /* Combining_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combining_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9E1D186C24EC183800D43A85 /* TimeBased_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBased_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E2B625A24E000F50020698A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9E2D810724EC197D0035F10B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9E2D810824EC197D0035F10B /* BaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
 		9E492D6B24E57DA600F08820 /* Subjects.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subjects.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E6C192724E4C3C300A19DE6 /* DisposeBag.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DisposeBag.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E6C192824E4E6EE00A19DE6 /* Factories.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factories.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -86,7 +94,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9E8271E424DFFD5B00566D4E = {
+		9E1D186724EC169600D43A85 /* 01_BasicRxSwift */ = {
 			isa = PBXGroup;
 			children = (
 				9E82720424DFFEDE00566D4E /* HelloRx.playground */,
@@ -95,6 +103,44 @@
 				9E6C192824E4E6EE00A19DE6 /* Factories.playground */,
 				9E6C192924E4F5DD00A19DE6 /* Traits.playground */,
 				9E492D6B24E57DA600F08820 /* Subjects.playground */,
+			);
+			path = 01_BasicRxSwift;
+			sourceTree = "<group>";
+		};
+		9E1D186824EC16C700D43A85 /* 02_Operators */ = {
+			isa = PBXGroup;
+			children = (
+				9E1D186924EC172E00D43A85 /* Filtering_Operators.playground */,
+				9E1D186A24EC17A900D43A85 /* Transforming_Operators.playground */,
+				9E1D186B24EC17F600D43A85 /* Combining_Operators.playground */,
+				9E1D186C24EC183800D43A85 /* TimeBased_Operators.playground */,
+			);
+			path = 02_Operators;
+			sourceTree = "<group>";
+		};
+		9E2D810624EC19610035F10B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9E2D810724EC197D0035F10B /* BaseViewController.swift */,
+				9E2D810824EC197D0035F10B /* BaseViewController.xib */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9E2D810B24EC1CAC0035F10B /* 01 */ = {
+			isa = PBXGroup;
+			children = (
+				9E85ED3E24EAB9B6002EBED8 /* ChangeAvatar */,
+				9EE3D38924E7D7BF00B70216 /* Register */,
+			);
+			path = 01;
+			sourceTree = "<group>";
+		};
+		9E8271E424DFFD5B00566D4E = {
+			isa = PBXGroup;
+			children = (
+				9E1D186724EC169600D43A85 /* 01_BasicRxSwift */,
+				9E1D186824EC16C700D43A85 /* 02_Operators */,
 				9E8271EF24DFFD5B00566D4E /* BasicRxSwift */,
 				9E8271EE24DFFD5B00566D4E /* Products */,
 				060B78E8989B55FFA66D5D13 /* Pods */,
@@ -170,8 +216,8 @@
 		9EE3D38824E7D7B100B70216 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E85ED3E24EAB9B6002EBED8 /* ChangeAvatar */,
-				9EE3D38924E7D7BF00B70216 /* Register */,
+				9E2D810B24EC1CAC0035F10B /* 01 */,
+				9E2D810624EC19610035F10B /* Base */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -248,6 +294,7 @@
 				9E8271FD24DFFD5D00566D4E /* LaunchScreen.storyboard in Resources */,
 				9E8271FA24DFFD5D00566D4E /* Assets.xcassets in Resources */,
 				9E85ED4724EABA73002EBED8 /* AvatarCell.xib in Resources */,
+				9E2D810A24EC197D0035F10B /* BaseViewController.xib in Resources */,
 				9EE3D38D24E7D7D900B70216 /* RegisterViewController.xib in Resources */,
 				9E85ED4224EAB9DC002EBED8 /* ChangeAvatarViewController.xib in Resources */,
 			);
@@ -307,6 +354,7 @@
 				9E85ED4124EAB9DC002EBED8 /* ChangeAvatarViewController.swift in Sources */,
 				9E8271F324DFFD5B00566D4E /* SceneDelegate.swift in Sources */,
 				9E2B625B24E000F50020698A /* Helper.swift in Sources */,
+				9E2D810924EC197D0035F10B /* BaseViewController.swift in Sources */,
 				9E85ED4624EABA73002EBED8 /* AvatarCell.swift in Sources */,
 				9EE3D38C24E7D7D900B70216 /* RegisterViewController.swift in Sources */,
 			);
