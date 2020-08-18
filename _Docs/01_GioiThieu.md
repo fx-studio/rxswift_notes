@@ -17,7 +17,7 @@ Ví dụ: dễ hiểu là chương trình của bạn phát một bài hát từ
 
 Nếu bạn là một lập trình viên iOS thì có khi bạn đã sử dụng chúng nó quá nhiều mà không hết hay biết gì. Tất cả đều là thuyết âm mưu mà Apple đã dày công xây dựng lâu nay.
 
-###Cocoa and UIKit asynchronous APIs
+### Cocoa and UIKit asynchronous APIs
 
 * **Notification Center** : Dùng để lắng nghe một sự kiện xảy ra, dù đang ở bất kì đâu. Hay dùng như ẩn hiện bàn phím
 * **The delegate pattern** : Uỷ quyền cho một đối tượng nhằm để thực hiện một hoặc nhiều hành động khác lên một đối tượng khác
