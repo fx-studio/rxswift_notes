@@ -52,6 +52,48 @@ class RegisterViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func register(_ sender: Any) {
+//        RegisterModel.shared().register(username: usernameTextField.text,
+//                                        password: passwordTextField.text,
+//                                        email: emailTextField.text,
+//                                        avatar: avatarImageView.image)
+//            .subscribe(onNext: { done in
+//                print("Register successfully")
+//            }, onError: { error in
+//                if let myError = error as? APIError {
+//                    print("Register with error: \(myError.localizedDescription)")
+//                }
+//            }, onCompleted: {
+//                print("Register completed")
+//            })
+//            .disposed(by: bag)
+        
+        RegisterModel.shared().register2(username: usernameTextField.text,
+                                                password: passwordTextField.text,
+                                                email: emailTextField.text,
+                                                avatar: avatarImageView.image)
+            .asObservable()
+            .subscribe(onNext: { done in
+                print("Register successfully")
+            }, onError: { error in
+                if let myError = error as? APIError {
+                    print("Register with error: \(myError.localizedDescription)")
+                }
+            }, onCompleted: {
+                print("Register completed")
+            })
+            .disposed(by: bag)
+        
+//        RegisterModel.shared().register2(username: usernameTextField.text,
+//                                         password: passwordTextField.text,
+//                                         email: emailTextField.text,
+//                                         avatar: avatarImageView.image)
+//            .subscribe(onSuccess: { done in
+//                print("Register successfully")
+//            }, onError: { error in
+//                if let myError = error as? APIError {
+//                    print("Register with error: \(myError.localizedDescription)")
+//                }
+//            }).disposed(by: bag)
     }
     
     @IBAction func clear(_ sender: Any) {
