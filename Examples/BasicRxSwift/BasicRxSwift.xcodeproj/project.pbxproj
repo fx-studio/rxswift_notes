@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1BB599C3E09A54A62BA46DE7 /* Pods_BasicRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2883B6787E7A8140A3E15B95 /* Pods_BasicRxSwift.framework */; };
+		9E1CE20F24F64AE20096CC1F /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE20D24F64AE20096CC1F /* MusicListViewController.swift */; };
+		9E1CE21024F64AE20096CC1F /* MusicListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E1CE20E24F64AE20096CC1F /* MusicListViewController.xib */; };
+		9E1CE21424F64B0E0096CC1F /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE21224F64B0E0096CC1F /* MusicCell.swift */; };
+		9E1CE21524F64B0E0096CC1F /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E1CE21324F64B0E0096CC1F /* MusicCell.xib */; };
+		9E1CE21724F651E20096CC1F /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE21624F651E20096CC1F /* Music.swift */; };
 		9E2B625B24E000F50020698A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B625A24E000F50020698A /* Helper.swift */; };
 		9E2D810924EC197D0035F10B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D810724EC197D0035F10B /* BaseViewController.swift */; };
 		9E2D810A24EC197D0035F10B /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D810824EC197D0035F10B /* BaseViewController.xib */; };
@@ -27,6 +32,11 @@
 /* Begin PBXFileReference section */
 		2883B6787E7A8140A3E15B95 /* Pods_BasicRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F38075EE5F477ED74506775 /* Pods-BasicRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-BasicRxSwift/Pods-BasicRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		9E1CE20D24F64AE20096CC1F /* MusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
+		9E1CE20E24F64AE20096CC1F /* MusicListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicListViewController.xib; sourceTree = "<group>"; };
+		9E1CE21224F64B0E0096CC1F /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		9E1CE21324F64B0E0096CC1F /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
+		9E1CE21624F651E20096CC1F /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		9E1D186924EC172E00D43A85 /* Filtering_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filtering_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E1D186A24EC17A900D43A85 /* Transforming_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Transforming_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E1D186B24EC17F600D43A85 /* Combining_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combining_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -92,6 +102,25 @@
 				9E8271FB24DFFD5D00566D4E /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9E1CE20C24F64A380096CC1F /* 02 */ = {
+			isa = PBXGroup;
+			children = (
+				9E1CE21124F64AF30096CC1F /* Cell */,
+				9E1CE20D24F64AE20096CC1F /* MusicListViewController.swift */,
+				9E1CE20E24F64AE20096CC1F /* MusicListViewController.xib */,
+			);
+			path = 02;
+			sourceTree = "<group>";
+		};
+		9E1CE21124F64AF30096CC1F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9E1CE21224F64B0E0096CC1F /* MusicCell.swift */,
+				9E1CE21324F64B0E0096CC1F /* MusicCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9E1D186724EC169600D43A85 /* 01_BasicRxSwift */ = {
@@ -200,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				9EBC073024EBBABC007E3937 /* RegisterModel.swift */,
+				9E1CE21624F651E20096CC1F /* Music.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +246,7 @@
 		9EE3D38824E7D7B100B70216 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E1CE20C24F64A380096CC1F /* 02 */,
 				9E2D810B24EC1CAC0035F10B /* 01 */,
 				9E2D810624EC19610035F10B /* Base */,
 			);
@@ -291,12 +322,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1CE21024F64AE20096CC1F /* MusicListViewController.xib in Resources */,
 				9E8271FD24DFFD5D00566D4E /* LaunchScreen.storyboard in Resources */,
 				9E8271FA24DFFD5D00566D4E /* Assets.xcassets in Resources */,
 				9E85ED4724EABA73002EBED8 /* AvatarCell.xib in Resources */,
 				9E2D810A24EC197D0035F10B /* BaseViewController.xib in Resources */,
 				9EE3D38D24E7D7D900B70216 /* RegisterViewController.xib in Resources */,
 				9E85ED4224EAB9DC002EBED8 /* ChangeAvatarViewController.xib in Resources */,
+				9E1CE21524F64B0E0096CC1F /* MusicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +384,12 @@
 			files = (
 				9E8271F124DFFD5B00566D4E /* AppDelegate.swift in Sources */,
 				9EBC073124EBBABC007E3937 /* RegisterModel.swift in Sources */,
+				9E1CE20F24F64AE20096CC1F /* MusicListViewController.swift in Sources */,
 				9E85ED4124EAB9DC002EBED8 /* ChangeAvatarViewController.swift in Sources */,
 				9E8271F324DFFD5B00566D4E /* SceneDelegate.swift in Sources */,
+				9E1CE21424F64B0E0096CC1F /* MusicCell.swift in Sources */,
 				9E2B625B24E000F50020698A /* Helper.swift in Sources */,
+				9E1CE21724F651E20096CC1F /* Music.swift in Sources */,
 				9E2D810924EC197D0035F10B /* BaseViewController.swift in Sources */,
 				9E85ED4624EABA73002EBED8 /* AvatarCell.swift in Sources */,
 				9EE3D38C24E7D7D900B70216 /* RegisterViewController.swift in Sources */,

@@ -15,6 +15,10 @@ Danh sách các phần như sau:
 3. [Custom Observable](08_3_CustomObservable.md)
 
    Tạo nên các function với giá trị trả về là một Observable. Tiền đề tạo nên các Model hay các API sau này.
+   
+4. [Fetching Data from API](08_4_FetchingDataAPI.md)
+
+   Tương tác với API để lấy dữ liệu và update chúng trên UI
 
 Trong phần này chỉ mang tính chất áp dụng thư viện RxSwift và giải quyết các bài toán cơ bản khi làm việc với iOS Project bằng UIKit mà thôi. Không áp dụng các cách giải quyết cao cấp hay các mô hình hiện đại hơn.
 

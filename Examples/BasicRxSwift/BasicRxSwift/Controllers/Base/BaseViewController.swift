@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let names = ["Register",
-                 "xxx"]
+                 "Fetching Data"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,10 @@ extension BaseViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let vc = RegisterViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        case 1:
+            let vc = MusicListViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             
         default:

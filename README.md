@@ -28,6 +28,7 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
    * [Hello ViewController](./_Docs/08_1_HelloViewController.md)
    * [Talking to other ViewController](./_Docs/08_2_TalkingOtherVC.md)
    * [Custom Observable](./_Docs/08_3_CustomObservable.md)
+   * [Fetching Data from API](./_Docs/08_4_FetchingDataAPI.md)
 
 #### **Phần 2 : [Operators](./_Docs/09_0_Operators.md)**
 
@@ -35,6 +36,7 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 2. [Transforming Operators](./_Docs/09_2_Transforming_Operators.md)
 3. [Combining Operators](./_Docs/09_3_Combining_Operators.md)
 4. [Time-Based Operators](./_Docs/09_4_TimeBased_Operators.md)
+5. [Practice Operators](./_Docs/09_5_Practice_Operators.md)
 
 #### **Phần 3 : Basic RxCocoa**
 
