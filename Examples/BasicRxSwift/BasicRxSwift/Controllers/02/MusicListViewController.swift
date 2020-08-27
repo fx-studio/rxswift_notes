@@ -18,13 +18,22 @@ class MusicListViewController: UIViewController {
     
     // MARK: - Properties
     private let urlMusic = "https://rss.itunes.apple.com/api/v1/us/itunes-music/new-music/all/100/explicit.json"
+    private let musicsFileURL = cachedFileURL("musics.json")
     private let bag = DisposeBag()
-    private var musics: [Music] = []
+    private var musics = BehaviorRelay<[Music]>(value: [])
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        
+        // read musics file
+        let decoder = JSONDecoder()
+        if let musicsData = try? Data(contentsOf: musicsFileURL),
+           let preMusics = try? decoder.decode([Music].self, from: musicsData) {
+            self.musics.accept(preMusics)
+        }
+
         loadAPI()
     }
     
@@ -39,20 +48,40 @@ class MusicListViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    private func processMusics(newMusics: [Music]) {
+        // update UI
+        DispatchQueue.main.async {
+            self.musics.accept(newMusics)
+            self.tableView.reloadData()
+        }
+        
+        // save to file
+        let encoder = JSONEncoder()
+        if let musicsData = try? encoder.encode(newMusics) {
+            try? musicsData.write(to: musicsFileURL, options: .atomicWrite)
+        }
+    }
+    
+    // MARK: - API
     private func loadAPI() {
-        let observable = Observable<String>.of(urlMusic)
+        let response = Observable<String>.of(urlMusic)
             .map { urlString -> URL in
                 return URL(string: urlString)!
             }
             .map { url -> URLRequest in
-                return URLRequest(url: url)
+                let request = URLRequest(url: url)
+                
+                // modified Header here
+                
+                return request
             }
             .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
                 return URLSession.shared.rx.response(request: request)
             }
             .share(replay: 1)
         
-        observable
+        // subscription #1
+        response
             .filter { response, _ -> Bool in
                 return 200..<300 ~= response.statusCode
             }
@@ -65,21 +94,24 @@ class MusicListViewController: UIViewController {
                 return !objects.isEmpty
             }
             .subscribe(onNext: { musics in
-                DispatchQueue.main.async {
-                    self.musics = musics
-                    self.tableView.reloadData()
-                }
+                self.processMusics(newMusics: musics)
             })
             .disposed(by: bag)
-            
-        
     }
     
+    // MARK: File plist
+    static func cachedFileURL(_ fileName: String) -> URL {
+        return FileManager.default
+            .urls(for: .cachesDirectory, in: .allDomainsMask)
+            .first!
+            .appendingPathComponent(fileName)
+    }
+
 }
 
 extension MusicListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        musics.count
+        musics.value.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -89,7 +121,7 @@ extension MusicListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MusicCell
         
-        let item = musics[indexPath.row]
+        let item = musics.value[indexPath.row]
         cell.nameLabel.text = item.name
         cell.artistNameLabel.text = item.artistName
         cell.thumbnailImageView.kf.setImage(with: URL(string: item.artworkUrl100)!)

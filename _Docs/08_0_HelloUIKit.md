@@ -19,6 +19,10 @@ Danh sách các phần như sau:
 4. [Fetching Data from API](08_4_FetchingDataAPI.md)
 
    Tương tác với API để lấy dữ liệu và update chúng trên UI
+   
+5. [Working with cache data](08_5_WorkingCache.md)
+
+   Phần này sẽ xử lý dữ liệu lấy được từ API và lưu chúng vào 1 bộ nhớ tạm nào đó. Và cập nhật dữ liệu lên UI từ các nguồn khác nhau (bộ đệm & API)
 
 Trong phần này chỉ mang tính chất áp dụng thư viện RxSwift và giải quyết các bài toán cơ bản khi làm việc với iOS Project bằng UIKit mà thôi. Không áp dụng các cách giải quyết cao cấp hay các mô hình hiện đại hơn.
 
