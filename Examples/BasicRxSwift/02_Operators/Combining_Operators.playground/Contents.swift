@@ -327,3 +327,36 @@ example(of: "scan") {
         })
 }
 
+
+example(of: "test scan") {
+    struct Detail {
+        var name: String
+    }
+    
+    struct Master {
+        var name: String
+        var items = [Detail]()
+    }
+    
+    let masters = [Master(name: "1"),
+                   Master(name: "2"),
+                   Master(name: "3"),
+                   Master(name: "4")]
+    
+    let details = [[Detail(name: "1-1"), Detail(name: "1-2"), Detail(name: "3-1") , Detail(name: "4-1")],
+                   [Detail(name: "2-1"), Detail(name: "2-2"), Detail(name: "3-2") , Detail(name: "4-2")],
+                   [Detail(name: "3-1"), Detail(name: "2-3"), Detail(name: "3-3") , Detail(name: "4-3")],
+                   [Detail(name: "4-1"), Detail(name: "2-4"), Detail(name: "3-4") , Detail(name: "4-4")]]
+    
+    let source = PublishSubject<[Master]>()
+    let list = PublishSubject<[Detail]>()
+    
+    
+    
+    source.onNext(masters)
+    list.onNext(details[0])
+    list.onNext(details[1])
+    list.onNext(details[2])
+    list.onNext(details[3])
+    
+}

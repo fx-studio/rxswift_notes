@@ -13,7 +13,8 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let names = ["Register",
-                 "Fetching Data"]
+                 "Fetching Data",
+                 "Networking Model"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,10 @@ extension BaseViewController: UITableViewDelegate, UITableViewDataSource {
             
         case 1:
             let vc = MusicListViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        case 2:
+            let vc = CocktailViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             
         default:

@@ -30,6 +30,7 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
    * [Custom Observable](./_Docs/08_3_CustomObservable.md)
    * [Fetching Data from API](./_Docs/08_4_FetchingDataAPI.md)
    * [Working with Cache Data](./_Docs/08_5_WorkingCache.md)
+   * [Networking](./_Docs/08_6_Networking.md)
 
 #### **Phần 2 : [Operators](./_Docs/09_0_Operators.md)**
 
