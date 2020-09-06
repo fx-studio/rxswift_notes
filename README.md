@@ -40,9 +40,9 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 4. [Time-Based Operators](./_Docs/09_4_TimeBased_Operators.md)
 5. [Practice Operators](./_Docs/09_5_Practice_Operators.md)
 
-#### **Phần 3 : Basic RxCocoa**
+#### **Phần 3 : [Basic RxCocoa](./_Docs/10_0_RxCocoa.md)**
 
-1. 
+1. [Display Data](./_Docs/10_1_DisplayData.md)
 2. 
 
 ---

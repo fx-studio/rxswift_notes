@@ -20,6 +20,10 @@
 		9E2FBB8824F90AC80055631C /* DrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E2FBB8624F90AC80055631C /* DrinksViewController.xib */; };
 		9E2FBB8B24F90C050055631C /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2FBB8924F90C050055631C /* DrinkCell.swift */; };
 		9E2FBB8C24F90C050055631C /* DrinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E2FBB8A24F90C050055631C /* DrinkCell.xib */; };
+		9E6F4D2024FFA0BC00FA2053 /* WeatherCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6F4D1E24FFA0BC00FA2053 /* WeatherCityViewController.xib */; };
+		9E6F4D2124FFA0BC00FA2053 /* WeatherCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F4D1F24FFA0BC00FA2053 /* WeatherCityViewController.swift */; };
+		9E6F4D2324FFAAA700FA2053 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F4D2224FFAAA700FA2053 /* WeatherAPI.swift */; };
+		9E6F4D2624FFAAE300FA2053 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F4D2524FFAAE300FA2053 /* Weather.swift */; };
 		9E77136624F8B58E0013E6AE /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77136424F8B58E0013E6AE /* CocktailViewController.swift */; };
 		9E77136724F8B58E0013E6AE /* CocktailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E77136524F8B58E0013E6AE /* CocktailViewController.xib */; };
 		9E77136C24F8B88D0013E6AE /* CocktailCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77136B24F8B88D0013E6AE /* CocktailCategory.swift */; };
@@ -63,6 +67,10 @@
 		9E6C192724E4C3C300A19DE6 /* DisposeBag.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DisposeBag.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E6C192824E4E6EE00A19DE6 /* Factories.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factories.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E6C192924E4F5DD00A19DE6 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9E6F4D1E24FFA0BC00FA2053 /* WeatherCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCityViewController.xib; sourceTree = "<group>"; };
+		9E6F4D1F24FFA0BC00FA2053 /* WeatherCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCityViewController.swift; sourceTree = "<group>"; };
+		9E6F4D2224FFAAA700FA2053 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		9E6F4D2524FFAAE300FA2053 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		9E77136424F8B58E0013E6AE /* CocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
 		9E77136524F8B58E0013E6AE /* CocktailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailViewController.xib; sourceTree = "<group>"; };
 		9E77136B24F8B88D0013E6AE /* CocktailCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailCategory.swift; sourceTree = "<group>"; };
@@ -187,6 +195,24 @@
 			path = 01;
 			sourceTree = "<group>";
 		};
+		9E6F4D1924FFA03B00FA2053 /* 04 */ = {
+			isa = PBXGroup;
+			children = (
+				9E6F4D1F24FFA0BC00FA2053 /* WeatherCityViewController.swift */,
+				9E6F4D1E24FFA0BC00FA2053 /* WeatherCityViewController.xib */,
+			);
+			path = 04;
+			sourceTree = "<group>";
+		};
+		9E6F4D2424FFAAB500FA2053 /* WeatherAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9E6F4D2224FFAAA700FA2053 /* WeatherAPI.swift */,
+				9E6F4D2524FFAAE300FA2053 /* Weather.swift */,
+			);
+			path = WeatherAPI;
+			sourceTree = "<group>";
+		};
 		9E77136324F8B5400013E6AE /* 03 */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +317,7 @@
 		9EBC072F24EBBA93007E3937 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9E6F4D2424FFAAB500FA2053 /* WeatherAPI */,
 				9E77136A24F8B8320013E6AE /* NetworkingModel */,
 				9E77136924F8B81A0013E6AE /* Entities */,
 				9EBC073024EBBABC007E3937 /* RegisterModel.swift */,
@@ -310,6 +337,7 @@
 		9EE3D38824E7D7B100B70216 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E6F4D1924FFA03B00FA2053 /* 04 */,
 				9E77136324F8B5400013E6AE /* 03 */,
 				9E1CE20C24F64A380096CC1F /* 02 */,
 				9E2D810B24EC1CAC0035F10B /* 01 */,
@@ -397,6 +425,7 @@
 				9E2FBB8C24F90C050055631C /* DrinkCell.xib in Resources */,
 				9EE3D38D24E7D7D900B70216 /* RegisterViewController.xib in Resources */,
 				9E85ED4224EAB9DC002EBED8 /* ChangeAvatarViewController.xib in Resources */,
+				9E6F4D2024FFA0BC00FA2053 /* WeatherCityViewController.xib in Resources */,
 				9E1CE21524F64B0E0096CC1F /* MusicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +481,7 @@
 			files = (
 				9E8271F124DFFD5B00566D4E /* AppDelegate.swift in Sources */,
 				9EBC073124EBBABC007E3937 /* RegisterModel.swift in Sources */,
+				9E6F4D2124FFA0BC00FA2053 /* WeatherCityViewController.swift in Sources */,
 				9E1CE20F24F64AE20096CC1F /* MusicListViewController.swift in Sources */,
 				9E2FBB8724F90AC80055631C /* DrinksViewController.swift in Sources */,
 				9E85ED4124EAB9DC002EBED8 /* ChangeAvatarViewController.swift in Sources */,
@@ -460,8 +490,10 @@
 				9E8271F324DFFD5B00566D4E /* SceneDelegate.swift in Sources */,
 				9E77137024F8BA3A0013E6AE /* Networking.swift in Sources */,
 				9E2FBB8B24F90C050055631C /* DrinkCell.swift in Sources */,
+				9E6F4D2624FFAAE300FA2053 /* Weather.swift in Sources */,
 				9E1CE21424F64B0E0096CC1F /* MusicCell.swift in Sources */,
 				9E77137224F8BE8D0013E6AE /* NetworkingResult.swift in Sources */,
+				9E6F4D2324FFAAA700FA2053 /* WeatherAPI.swift in Sources */,
 				9E77136E24F8B8FF0013E6AE /* Drink.swift in Sources */,
 				9E2B625B24E000F50020698A /* Helper.swift in Sources */,
 				9E1CE21724F651E20096CC1F /* Music.swift in Sources */,

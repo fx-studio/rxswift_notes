@@ -14,7 +14,8 @@ class BaseViewController: UIViewController {
     
     let names = ["Register",
                  "Fetching Data",
-                 "Networking Model"]
+                 "Networking Model",
+                 "RxCocoa"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,10 @@ extension BaseViewController: UITableViewDelegate, UITableViewDataSource {
             
         case 2:
             let vc = CocktailViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        case 3:
+            let vc = WeatherCityViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             
         default:
