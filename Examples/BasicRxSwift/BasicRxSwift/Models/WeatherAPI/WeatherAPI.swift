@@ -16,7 +16,7 @@ class WeatherAPI {
     
     // MARK: - Properties
     /// API key
-    private let apiKey = ""
+    private let apiKey = "7dca79804f2c29a96e3c6caa4bd63874"
     /// API base URL
     let baseURL = URL(string: "https://api.openweathermap.org/data/2.5")!
     

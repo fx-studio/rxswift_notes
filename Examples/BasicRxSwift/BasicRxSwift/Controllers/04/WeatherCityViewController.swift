@@ -27,6 +27,7 @@ class WeatherCityViewController: UIViewController {
         configUI()
         
         // Check TextField
+        /*
         searchCityName.rx.text.orEmpty
             .filter { !$0.isEmpty }
             .flatMap { text in
@@ -39,6 +40,38 @@ class WeatherCityViewController: UIViewController {
                 self.humidityLabel.text = "\(weather.humidity) %"
                 self.iconLabel.text = weather.icon
             })
+            .disposed(by: bag)
+         */
+        
+        // Creat search with textfield
+        let search = searchCityName.rx.text.orEmpty
+            .filter { !$0.isEmpty }
+            .flatMap { text in
+                return WeatherAPI.shared.currentWeather(city: text).catchErrorJustReturn(Weather.empty)
+            }
+            .share(replay: 1)
+            .observeOn(MainScheduler.instance)
+        
+        // Binding to UI
+        search.map { "\($0.temperature) °C" }
+            .bind(to: tempLabel.rx.text)
+            .disposed(by: bag)
+        
+        search.map { $0.cityName }
+            .bind(to: cityNameLabel.rx.text)
+            .disposed(by: bag)
+        
+        search.map { "\($0.humidity) %" }
+            .bind(to: humidityLabel.rx.text)
+            .disposed(by: bag)
+        
+        search.map { $0.icon }
+            .bind(to: iconLabel.rx.text)
+            .disposed(by: bag)
+        
+        // custom Binder
+        search.map { $0.cityName }
+            .bind(to: self.rx.title)
             .disposed(by: bag)
         
         // Subcribe
@@ -58,4 +91,12 @@ class WeatherCityViewController: UIViewController {
         title = "Weather City"
     }
 
+}
+
+extension Reactive where Base: WeatherCityViewController {
+    var title: Binder<String> {
+        return Binder(self.base) { (vc, value) in
+            vc.title = value
+        }
+    }
 }

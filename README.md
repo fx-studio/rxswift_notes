@@ -43,7 +43,8 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 #### **Phần 3 : [Basic RxCocoa](./_Docs/10_0_RxCocoa.md)**
 
 1. [Display Data](./_Docs/10_1_DisplayData.md)
-2. 
+2. [Binding Observables](./_Docs/10_2_BindingObservables.md)
+3. 
 
 ---
 
