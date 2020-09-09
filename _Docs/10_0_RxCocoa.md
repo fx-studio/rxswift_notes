@@ -19,7 +19,7 @@ Về các bài được trình bày trong phần này chủ yếu tập trung c�
 
    Hiển thị dữ liệu luôn là việc đầu tiên cần phải làm. Bên cạnh đó cũng là sự update lại dữ liệu lên giao diện.
 
-2. [Binding Observables](10_1_ BindingObservables.md)
+2. [Binding Observables](10_2_BindingObservables.md)
 
    Cách để liên kết 2 thực thể với nhau bằng dữ liệu.
 
