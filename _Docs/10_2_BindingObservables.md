@@ -42,7 +42,7 @@ Ta có mô hình như sau:
 
 ```
       |----- bind ----> UI Control 1
-			|
+      |
       |----- bind ----> UI Control 2	
 Data -|
       |----- bind ----> UI Control 3
@@ -164,7 +164,7 @@ uploadFileObs
 
 Khi lượng dung lượng được upload được gởi đi, thì sẽ nhận được giá trị. Tiến hành biến đổi nó thành `Float` và `bind(to:)` tới thuộc tính `progress` trong không gian Rx. Khi đó về mặt UI thì nó sẽ tự cập nhật luôn trên thanh UIProgressView. Mà ta không cần phải xử lý gì nữa.
 
-#### 3.2. Custom
+#### 3.2. Custom Binder
 
 Chúng ta thực hiện custom Binder một cách đơn giản nhất thôi nha. Chỉ mở rộng thêm class có sẵn và cho nó gia nhập vào không gian của Rx. Công việc ta gôm các bước sau:
 
