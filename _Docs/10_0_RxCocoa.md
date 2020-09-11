@@ -23,4 +23,8 @@ Về các bài được trình bày trong phần này chủ yếu tập trung c�
 
    Cách để liên kết 2 thực thể với nhau bằng dữ liệu.
 
-3. 
+3. [RxCocoa Traits](10_3_RxCocoaTraits.md)
+
+   Tìm hiểu về các Traits đặc trưng của RxCocoa và đặc điểm từng loại.
+
+4. 

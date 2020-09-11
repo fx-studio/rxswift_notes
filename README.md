@@ -44,7 +44,8 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 
 1. [Display Data](./_Docs/10_1_DisplayData.md)
 2. [Binding Observables](./_Docs/10_2_BindingObservables.md)
-3. 
+3. [RxCocoa Traits](./_Docs/10_3_RxCocoaTraits.md)
+4. 
 
 ---
 

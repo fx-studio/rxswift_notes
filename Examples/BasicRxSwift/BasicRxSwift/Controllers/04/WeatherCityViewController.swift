@@ -26,6 +26,8 @@ class WeatherCityViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         
+        // ------------------------------------------------------------------------------------------//
+        // MARK: Display Data from API
         // Check TextField
         /*
         searchCityName.rx.text.orEmpty
@@ -43,7 +45,11 @@ class WeatherCityViewController: UIViewController {
             .disposed(by: bag)
          */
         
+        
+        // ------------------------------------------------------------------------------------------//
+        // MARK: Binding Observables
         // Creat search with textfield
+        /*
         let search = searchCityName.rx.text.orEmpty
             .filter { !$0.isEmpty }
             .flatMap { text in
@@ -73,8 +79,56 @@ class WeatherCityViewController: UIViewController {
         search.map { $0.cityName }
             .bind(to: self.rx.title)
             .disposed(by: bag)
+        */
         
-        // Subcribe
+        
+        // ------------------------------------------------------------------------------------------//
+        //MARK: RxCocoa Traits
+        // Create Drive
+        /*
+        let search = searchCityName.rx.text.orEmpty
+            .filter { !$0.isEmpty }
+            .flatMap { text in
+                return WeatherAPI.shared.currentWeather(city: text).catchErrorJustReturn(Weather.empty)
+            }
+            .asDriver(onErrorJustReturn: Weather.empty)
+        */
+        
+        // Control Event
+        let search = searchCityName.rx.controlEvent(.editingDidEndOnExit)
+            .map { self.searchCityName.text ?? "" }
+            .filter { !$0.isEmpty }
+            .flatMap { text in
+                return WeatherAPI.shared
+                    .currentWeather(city: text)
+                    .catchErrorJustReturn(Weather.empty)
+            }
+            .asDriver(onErrorJustReturn: Weather.empty)
+        
+        // drive UI
+        search.map { "\($0.temperature) °C" }
+            .drive(tempLabel.rx.text)
+            .disposed(by: bag)
+        
+        search.map { $0.cityName }
+            .drive(cityNameLabel.rx.text)
+            .disposed(by: bag)
+        
+        search.map { "\($0.humidity) %" }
+            .drive(humidityLabel.rx.text)
+            .disposed(by: bag)
+        
+        search.map { $0.icon }
+            .drive(iconLabel.rx.text)
+            .disposed(by: bag)
+        
+        search.map { $0.cityName }
+            .drive(self.rx.title)
+            .disposed(by: bag)
+
+        
+        // ------------------------------------------------------------------------------------------//
+        //MARK: First Subcribe Observable
         WeatherAPI.shared.currentWeather(city: "Hanoi")
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { weather in
