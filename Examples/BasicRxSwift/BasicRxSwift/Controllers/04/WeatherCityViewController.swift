@@ -17,6 +17,9 @@ class WeatherCityViewController: UIViewController {
     @IBOutlet private var humidityLabel: UILabel!
     @IBOutlet private var iconLabel: UILabel!
     @IBOutlet private var cityNameLabel: UILabel!
+    @IBOutlet weak var containerView: UIStackView!
+    
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
     let bag = DisposeBag()
@@ -95,12 +98,28 @@ class WeatherCityViewController: UIViewController {
         */
         
         // Control Event
+        /*
         let search = searchCityName.rx.controlEvent(.editingDidEndOnExit)
             .map { self.searchCityName.text ?? "" }
             .filter { !$0.isEmpty }
             .flatMap { text in
                 return WeatherAPI.shared
                     .currentWeather(city: text)
+                    .catchErrorJustReturn(Weather.empty)
+            }
+            .asDriver(onErrorJustReturn: Weather.empty)
+         */
+        
+        // ------------------------------------------------------------------------------------------//
+        //MARK: Working with multi Control
+        // Tách Observables
+        let searchInput = searchCityName.rx.controlEvent(.editingDidEndOnExit)
+            .map { self.searchCityName.text ?? "" }
+            .filter { !$0.isEmpty }
+        
+        let search = searchInput
+            .flatMapLatest { text  in
+                return WeatherAPI.shared.currentWeather(city: text)
                     .catchErrorJustReturn(Weather.empty)
             }
             .asDriver(onErrorJustReturn: Weather.empty)
@@ -124,6 +143,39 @@ class WeatherCityViewController: UIViewController {
         
         search.map { $0.cityName }
             .drive(self.rx.title)
+            .disposed(by: bag)
+        
+        // loading view
+        let loading = Observable.merge(
+                searchInput.map { _ in true },
+                search.map { _ in false }.asObservable()
+            )
+            .startWith(true)
+            .asDriver(onErrorJustReturn: false)
+        
+        loading
+            .skip(1)
+            .drive(activityIndicator.rx.isAnimating)
+            .disposed(by: bag)
+        
+        loading
+            .drive(containerView.rx.isHidden)
+            .disposed(by: bag)
+        
+        loading
+            .drive(tempLabel.rx.isHidden)
+            .disposed(by: bag)
+        
+        loading
+            .drive(iconLabel.rx.isHidden)
+            .disposed(by: bag)
+        
+        loading
+            .drive(humidityLabel.rx.isHidden)
+            .disposed(by: bag)
+        
+        loading
+            .drive(cityNameLabel.rx.isHidden)
             .disposed(by: bag)
 
         

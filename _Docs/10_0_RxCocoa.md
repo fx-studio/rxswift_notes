@@ -27,4 +27,8 @@ Về các bài được trình bày trong phần này chủ yếu tập trung c�
 
    Tìm hiểu về các Traits đặc trưng của RxCocoa và đặc điểm từng loại.
 
-4. 
+4. [Multi Control](10_4_MultiControl.md)
+
+   Tương tác với nhiều UI trong một màn hình. Kết hợp với việc handle các Observables để đảm bảo hiển thị và dữ liệu với nhiều UI Control một lúc.
+
+5. 

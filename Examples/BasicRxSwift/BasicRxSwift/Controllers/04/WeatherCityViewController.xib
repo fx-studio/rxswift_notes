@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -9,7 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherCityViewController" customModule="BasicRxSwift" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="UjA-NZ-vWw" id="I6l-QO-Lj3"/>
                 <outlet property="cityNameLabel" destination="ikR-TI-C8d" id="1tz-g6-uYg"/>
+                <outlet property="containerView" destination="1pc-Qa-l98" id="u2l-rC-zsE"/>
                 <outlet property="humidityLabel" destination="LjN-nz-Ugs" id="Z2C-pW-Wm6"/>
                 <outlet property="iconLabel" destination="7d3-85-ZfV" id="kLL-Y1-X4M"/>
                 <outlet property="searchCityName" destination="cw0-e5-TOc" id="wLw-ft-zOb"/>
@@ -99,6 +101,14 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UjA-NZ-vWw">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="vCX-mS-WJn"/>
+                        <constraint firstAttribute="width" constant="20" id="wbw-I7-So3"/>
+                    </constraints>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -107,7 +117,9 @@
                 <constraint firstItem="1pc-Qa-l98" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LRu-fv-1nI"/>
                 <constraint firstItem="7d3-85-ZfV" firstAttribute="top" secondItem="1pc-Qa-l98" secondAttribute="bottom" constant="20" id="OUw-Vz-ZCc"/>
                 <constraint firstItem="cw0-e5-TOc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Wma-aS-1BS"/>
+                <constraint firstItem="UjA-NZ-vWw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="giZ-j1-AJ3"/>
                 <constraint firstItem="1pc-Qa-l98" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="j48-vC-pD5"/>
+                <constraint firstItem="UjA-NZ-vWw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kTe-7w-3yS"/>
                 <constraint firstItem="7d3-85-ZfV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lZc-UJ-mqg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cw0-e5-TOc" secondAttribute="trailing" constant="20" id="lhh-cE-ReO"/>
             </constraints>
