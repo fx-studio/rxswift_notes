@@ -13,6 +13,7 @@
 		9E1CE21424F64B0E0096CC1F /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE21224F64B0E0096CC1F /* MusicCell.swift */; };
 		9E1CE21524F64B0E0096CC1F /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E1CE21324F64B0E0096CC1F /* MusicCell.xib */; };
 		9E1CE21724F651E20096CC1F /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE21624F651E20096CC1F /* Music.swift */; };
+		9E235B762511F55D0019AAE2 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E235B752511F55D0019AAE2 /* CLLocationManager+Rx.swift */; };
 		9E2B625B24E000F50020698A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B625A24E000F50020698A /* Helper.swift */; };
 		9E2D810924EC197D0035F10B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D810724EC197D0035F10B /* BaseViewController.swift */; };
 		9E2D810A24EC197D0035F10B /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D810824EC197D0035F10B /* BaseViewController.xib */; };
@@ -56,6 +57,7 @@
 		9E1D186A24EC17A900D43A85 /* Transforming_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Transforming_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E1D186B24EC17F600D43A85 /* Combining_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combining_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E1D186C24EC183800D43A85 /* TimeBased_Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBased_Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9E235B752511F55D0019AAE2 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
 		9E2B625A24E000F50020698A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9E2D810724EC197D0035F10B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E2D810824EC197D0035F10B /* BaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
@@ -175,6 +177,14 @@
 				9E1D186C24EC183800D43A85 /* TimeBased_Operators.playground */,
 			);
 			path = 02_Operators;
+			sourceTree = "<group>";
+		};
+		9E235B742511F5440019AAE2 /* Exts */ = {
+			isa = PBXGroup;
+			children = (
+				9E235B752511F55D0019AAE2 /* CLLocationManager+Rx.swift */,
+			);
+			path = Exts;
 			sourceTree = "<group>";
 		};
 		9E2D810624EC19610035F10B /* Base */ = {
@@ -317,6 +327,7 @@
 		9EBC072F24EBBA93007E3937 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9E235B742511F5440019AAE2 /* Exts */,
 				9E6F4D2424FFAAB500FA2053 /* WeatherAPI */,
 				9E77136A24F8B8320013E6AE /* NetworkingModel */,
 				9E77136924F8B81A0013E6AE /* Entities */,
@@ -495,6 +506,7 @@
 				9E77137224F8BE8D0013E6AE /* NetworkingResult.swift in Sources */,
 				9E6F4D2324FFAAA700FA2053 /* WeatherAPI.swift in Sources */,
 				9E77136E24F8B8FF0013E6AE /* Drink.swift in Sources */,
+				9E235B762511F55D0019AAE2 /* CLLocationManager+Rx.swift in Sources */,
 				9E2B625B24E000F50020698A /* Helper.swift in Sources */,
 				9E1CE21724F651E20096CC1F /* Music.swift in Sources */,
 				9E77136C24F8B88D0013E6AE /* CocktailCategory.swift in Sources */,

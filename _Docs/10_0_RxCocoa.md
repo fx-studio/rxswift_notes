@@ -31,4 +31,8 @@ Về các bài được trình bày trong phần này chủ yếu tập trung c�
 
    Tương tác với nhiều UI trong một màn hình. Kết hợp với việc handle các Observables để đảm bảo hiển thị và dữ liệu với nhiều UI Control một lúc.
 
-5. 
+5. [Extending CCLocationManager](10_5_ExtendingCCLocationManager.md)
+
+   Mở rộng class CLLocationManager trong không gian Rx. Học cách Rx hoá các protocol delegate & delegate proxy.
+
+6. 

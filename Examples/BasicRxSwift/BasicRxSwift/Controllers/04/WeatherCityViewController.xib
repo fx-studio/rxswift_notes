@@ -14,6 +14,7 @@
                 <outlet property="containerView" destination="1pc-Qa-l98" id="u2l-rC-zsE"/>
                 <outlet property="humidityLabel" destination="LjN-nz-Ugs" id="Z2C-pW-Wm6"/>
                 <outlet property="iconLabel" destination="7d3-85-ZfV" id="kLL-Y1-X4M"/>
+                <outlet property="locationButton" destination="yV0-c2-MI8" id="HAB-ZX-yhi"/>
                 <outlet property="searchCityName" destination="cw0-e5-TOc" id="wLw-ft-zOb"/>
                 <outlet property="tempLabel" destination="y7T-dQ-Fx1" id="jcS-eM-Jqz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -109,11 +110,21 @@
                     </constraints>
                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV0-c2-MI8">
+                    <rect key="frame" x="344" y="811.5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="E9X-4n-gMg"/>
+                        <constraint firstAttribute="height" constant="51" id="Rw1-Up-lCa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <state key="normal" backgroundImage="location.fill" catalog="system"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="cw0-e5-TOc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="0Z2-Pj-isM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1pc-Qa-l98" secondAttribute="trailing" constant="20" id="0uk-ui-3xz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yV0-c2-MI8" secondAttribute="trailing" constant="20" id="A8m-cs-QUm"/>
                 <constraint firstItem="1pc-Qa-l98" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LRu-fv-1nI"/>
                 <constraint firstItem="7d3-85-ZfV" firstAttribute="top" secondItem="1pc-Qa-l98" secondAttribute="bottom" constant="20" id="OUw-Vz-ZCc"/>
                 <constraint firstItem="cw0-e5-TOc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Wma-aS-1BS"/>
@@ -122,9 +133,13 @@
                 <constraint firstItem="UjA-NZ-vWw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kTe-7w-3yS"/>
                 <constraint firstItem="7d3-85-ZfV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lZc-UJ-mqg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cw0-e5-TOc" secondAttribute="trailing" constant="20" id="lhh-cE-ReO"/>
+                <constraint firstItem="yV0-c2-MI8" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="qPP-cW-EIw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
         </view>
     </objects>
+    <resources>
+        <image name="location.fill" catalog="system" width="128" height="115"/>
+    </resources>
 </document>

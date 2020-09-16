@@ -8,6 +8,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import CoreLocation
 
 class WeatherCityViewController: UIViewController {
     
@@ -21,8 +22,12 @@ class WeatherCityViewController: UIViewController {
     
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var locationButton: UIButton!
+    
     // MARK: - Properties
     let bag = DisposeBag()
+    
+    private let locationManager = CLLocationManager()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -124,6 +129,27 @@ class WeatherCityViewController: UIViewController {
             }
             .asDriver(onErrorJustReturn: Weather.empty)
         
+        // ------------------------------------------------------------------------------------------//
+        //MARK: Extension CLLocationManager
+        // request user authen
+        locationButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                
+                self.locationManager.requestWhenInUseAuthorization()
+                self.locationManager.startUpdatingLocation()
+            })
+            .disposed(by: bag)
+        
+        // subscribe updateLocation
+        locationManager.rx.didUpdateLocation
+            .subscribe(onNext: { locations in
+                print(locations)
+            })
+            .disposed(by: bag)
+        
+        // ------------------------------------------------------------------------------------------//
+        //MARK: DRIVER to UI
         // drive UI
         search.map { "\($0.temperature) °C" }
             .drive(tempLabel.rx.text)

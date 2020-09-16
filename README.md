@@ -46,7 +46,8 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 2. [Binding Observables](./_Docs/10_2_BindingObservables.md)
 3. [RxCocoa Traits](./_Docs/10_3_RxCocoaTraits.md)
 4. [Multi Control](./_Docs/10_4_MultiControl.md)
-5. 
+5. [Extending CCLocationManager](./_Docs/10_5_ExtendingCCLocationManager.md)
+6. 
 
 ---
 
