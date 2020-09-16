@@ -35,7 +35,7 @@ class WeatherCityViewController: UIViewController {
         configUI()
         
         // ------------------------------------------------------------------------------------------//
-        // MARK: Display Data from API
+        // MARK: - Display Data from API
         // Check TextField
         /*
         searchCityName.rx.text.orEmpty
@@ -55,7 +55,7 @@ class WeatherCityViewController: UIViewController {
         
         
         // ------------------------------------------------------------------------------------------//
-        // MARK: Binding Observables
+        // MARK: - Binding Observables
         // Creat search with textfield
         /*
         let search = searchCityName.rx.text.orEmpty
@@ -91,7 +91,7 @@ class WeatherCityViewController: UIViewController {
         
         
         // ------------------------------------------------------------------------------------------//
-        //MARK: RxCocoa Traits
+        //MARK: - RxCocoa Traits
         // Create Drive
         /*
         let search = searchCityName.rx.text.orEmpty
@@ -116,7 +116,7 @@ class WeatherCityViewController: UIViewController {
          */
         
         // ------------------------------------------------------------------------------------------//
-        //MARK: Working with multi Control
+        //MARK: - Working with multi Control
         // Tách Observables
         let searchInput = searchCityName.rx.controlEvent(.editingDidEndOnExit)
             .map { self.searchCityName.text ?? "" }
@@ -130,7 +130,7 @@ class WeatherCityViewController: UIViewController {
             .asDriver(onErrorJustReturn: Weather.empty)
         
         // ------------------------------------------------------------------------------------------//
-        //MARK: Extension CLLocationManager
+        //MARK: - Extension CLLocationManager
         // request user authen
         locationButton.rx.tap
             .subscribe(onNext: { [weak self] in
@@ -149,7 +149,7 @@ class WeatherCityViewController: UIViewController {
             .disposed(by: bag)
         
         // ------------------------------------------------------------------------------------------//
-        //MARK: DRIVER to UI
+        //MARK: - DRIVER to UI
         // drive UI
         search.map { "\($0.temperature) °C" }
             .drive(tempLabel.rx.text)
@@ -206,7 +206,7 @@ class WeatherCityViewController: UIViewController {
 
         
         // ------------------------------------------------------------------------------------------//
-        //MARK: First Subcribe Observable
+        //MARK: - First Subcribe Observable
         WeatherAPI.shared.currentWeather(city: "Hanoi")
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { weather in
