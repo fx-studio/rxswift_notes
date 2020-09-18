@@ -66,6 +66,7 @@
 		9E2FBB8924F90C050055631C /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
 		9E2FBB8A24F90C050055631C /* DrinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCell.xib; sourceTree = "<group>"; };
 		9E492D6B24E57DA600F08820 /* Subjects.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subjects.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9E4A48F02514ABAC006ECF09 /* HelloOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HelloOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E6C192724E4C3C300A19DE6 /* DisposeBag.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DisposeBag.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E6C192824E4E6EE00A19DE6 /* Factories.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factories.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9E6C192924E4F5DD00A19DE6 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -171,6 +172,7 @@
 		9E1D186824EC16C700D43A85 /* 02_Operators */ = {
 			isa = PBXGroup;
 			children = (
+				9E4A48F02514ABAC006ECF09 /* HelloOperators.playground */,
 				9E1D186924EC172E00D43A85 /* Filtering_Operators.playground */,
 				9E1D186A24EC17A900D43A85 /* Transforming_Operators.playground */,
 				9E1D186B24EC17F600D43A85 /* Combining_Operators.playground */,
