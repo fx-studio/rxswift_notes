@@ -122,16 +122,20 @@ class WeatherCityViewController: UIViewController {
             .map { self.searchCityName.text ?? "" }
             .filter { !$0.isEmpty }
         
+        /* --> replay with merge
         let search = searchInput
             .flatMapLatest { text  in
                 return WeatherAPI.shared.currentWeather(city: text)
                     .catchErrorJustReturn(Weather.empty)
             }
             .asDriver(onErrorJustReturn: Weather.empty)
+        */
         
         // ------------------------------------------------------------------------------------------//
         //MARK: - Extension CLLocationManager
+        
         // request user authen
+        /*
         locationButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else { return }
@@ -140,13 +144,53 @@ class WeatherCityViewController: UIViewController {
                 self.locationManager.startUpdatingLocation()
             })
             .disposed(by: bag)
+        */
+        
+        // get & filter location
+        let currentLocation = locationManager.rx.didUpdateLocation
+            .map { locations in locations[0] }
+            .filter { location in
+                return location.horizontalAccuracy < kCLLocationAccuracyHundredMeters
+            }
         
         // subscribe updateLocation
         locationManager.rx.didUpdateLocation
             .subscribe(onNext: { locations in
-                print(locations)
+                print("🔴 ", locations)
             })
             .disposed(by: bag)
+        
+        // when tap button
+        let locationInput = locationButton.rx.tap.asObservable()
+            .do(onNext: {
+                self.locationManager.requestWhenInUseAuthorization()
+                self.locationManager.startUpdatingLocation()
+                
+            })
+    
+        let locationObs = locationInput
+            .flatMap { return currentLocation.take(1) }
+        
+        // ------------------------------------------------------------------------------------------//
+        //MARK: - MERGE SEARCHS
+        
+        // search with UITextField
+        let textSearch = searchInput.flatMap { text in
+            return WeatherAPI.shared.currentWeather(city: text)
+                .catchErrorJustReturn(.dummy)
+        }
+        
+        
+        // search with Location
+        let locationSearch = locationObs.flatMap { location  in
+            return WeatherAPI.shared.currentWeather(at: location.coordinate)
+                    .catchErrorJustReturn(.dummy)
+        }
+        
+        // merge search
+        let search = Observable
+            .merge(locationSearch, textSearch)
+            .asDriver(onErrorJustReturn: .dummy)
         
         // ------------------------------------------------------------------------------------------//
         //MARK: - DRIVER to UI
@@ -174,6 +218,7 @@ class WeatherCityViewController: UIViewController {
         // loading view
         let loading = Observable.merge(
                 searchInput.map { _ in true },
+                locationInput.map { _ in true }, // update with search at Location
                 search.map { _ in false }.asObservable()
             )
             .startWith(true)

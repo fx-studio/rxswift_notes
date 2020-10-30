@@ -47,7 +47,8 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 3. [RxCocoa Traits](./_Docs/10_3_RxCocoaTraits.md)
 4. [Multi Control](./_Docs/10_4_MultiControl.md)
 5. [Extending CCLocationManager](./_Docs/10_5_ExtendingCCLocationManager.md)
-6. 
+6. [Meger Observables Input](./_Docs/10_6_MegerObservablesInput.md)
+7. 
 
 ---
 

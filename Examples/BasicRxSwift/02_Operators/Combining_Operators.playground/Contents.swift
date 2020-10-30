@@ -5,7 +5,7 @@ example(of: "startWith") {
     let bag = DisposeBag()
     
     Observable.of("B", "C", "D", "E")
-        .startWith("A")
+        .startWith("A", "A1", "A2")
         .subscribe(onNext: { value in
             print(value)
         })

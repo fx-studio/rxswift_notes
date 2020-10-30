@@ -35,4 +35,6 @@ Về các bài được trình bày trong phần này chủ yếu tập trung c�
 
    Mở rộng class CLLocationManager trong không gian Rx. Học cách Rx hoá các protocol delegate & delegate proxy.
 
-6. 
+6. [Merge Observables Input](10_6_MegerObservablesInput.md)
+
+   Hợp nhất các sự kiện cùng chung một nhiệm vụ trong project. Từ đó hạn chế đi các lỗi ngớ ngẫn hay thiếu sót việc xử lý các sự kiện.

@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import CoreLocation
 
 class WeatherAPI {
     
@@ -62,6 +63,15 @@ class WeatherAPI {
                 let decoder = JSONDecoder()
                 return try decoder.decode(Weather.self, from: data)
             }
+    }
+    
+    func currentWeather(at coordinate: CLLocationCoordinate2D) -> Observable<Weather> {
+      return request(pathComponent: "weather", params: [("lat", "\(coordinate.latitude)"),
+                                                        ("lon", "\(coordinate.longitude)")])
+        .map { data in
+          let decoder = JSONDecoder()
+          return try decoder.decode(Weather.self, from: data)
+        }
     }
 }
 
