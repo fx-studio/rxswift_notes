@@ -38,3 +38,7 @@ Về các bài được trình bày trong phần này chủ yếu tập trung c�
 6. [Merge Observables Input](10_6_MegerObservablesInput.md)
 
    Hợp nhất các sự kiện cùng chung một nhiệm vụ trong project. Từ đó hạn chế đi các lỗi ngớ ngẫn hay thiếu sót việc xử lý các sự kiện.
+   
+7. [Extend UIKit](10_7_ExtendUIKit.md)
+
+    Triển khai mở rộng toàn diện một UI Control trong không gian Reactive ( tức `.rx`). Với các thành phần cần mở rộng là Proxy Delegate, Forward Delegate & Binder

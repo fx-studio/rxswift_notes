@@ -48,7 +48,7 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 4. [Multi Control](./_Docs/10_4_MultiControl.md)
 5. [Extending CCLocationManager](./_Docs/10_5_ExtendingCCLocationManager.md)
 6. [Meger Observables Input](./_Docs/10_6_MegerObservablesInput.md)
-7. 
+7. [Extend UIKit](./_Docs/10_7_ExtendUIKit.md)
 
 ---
 

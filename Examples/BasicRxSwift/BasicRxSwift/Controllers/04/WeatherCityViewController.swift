@@ -9,6 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import CoreLocation
+import MapKit
 
 class WeatherCityViewController: UIViewController {
     
@@ -23,6 +24,9 @@ class WeatherCityViewController: UIViewController {
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var locationButton: UIButton!
+    
+    @IBOutlet private var mapView: MKMapView!
+    @IBOutlet private var mapButton: UIButton!
     
     // MARK: - Properties
     let bag = DisposeBag()
@@ -172,6 +176,11 @@ class WeatherCityViewController: UIViewController {
             .flatMap { return currentLocation.take(1) }
         
         // ------------------------------------------------------------------------------------------//
+        //MARK: MAPVIEW SEARCHS INPUT
+        let mapInput = mapView.rx.regionDidChangeAnimated
+            .map { [unowned self] _ in self.mapView.centerCoordinate }
+        
+        // ------------------------------------------------------------------------------------------//
         //MARK: - MERGE SEARCHS
         
         // search with UITextField
@@ -187,9 +196,15 @@ class WeatherCityViewController: UIViewController {
                     .catchErrorJustReturn(.dummy)
         }
         
+        // search with MapView
+        let mapSearch = mapInput.flatMap { coordinate in
+            return WeatherAPI.shared.currentWeather(at: coordinate)
+                    .catchErrorJustReturn(.dummy)
+        }
+        
         // merge search
         let search = Observable
-            .merge(locationSearch, textSearch)
+            .merge(locationSearch, textSearch, mapSearch)
             .asDriver(onErrorJustReturn: .dummy)
         
         // ------------------------------------------------------------------------------------------//
@@ -219,6 +234,7 @@ class WeatherCityViewController: UIViewController {
         let loading = Observable.merge(
                 searchInput.map { _ in true },
                 locationInput.map { _ in true }, // update with search at Location
+                mapInput.map { _ in true }, // update with search at MapView
                 search.map { _ in false }.asObservable()
             )
             .startWith(true)
@@ -261,6 +277,46 @@ class WeatherCityViewController: UIViewController {
                 self.iconLabel.text = weather.icon
             })
             .disposed(by: bag)
+        
+        // ------------------------------------------------------------------------------------------//
+        //MARK: - Extend MKMapView
+        
+        // show/hide mapview
+        mapButton.rx.tap
+            .subscribe(onNext: {
+                self.mapView.isHidden.toggle()
+            })
+            .disposed(by: bag)
+        
+        // set delegate
+        mapView.rx.setDelegate(self)
+            .disposed(by: bag)
+        
+        // add pin
+        locationManager.rx.didUpdateLocation
+            .subscribe(onNext: { locations in
+                for location in locations {
+                    let pin = MKPointAnnotation()
+                    pin.coordinate = location.coordinate
+                    pin.title = "Pin nè"
+                    
+                    self.mapView.addAnnotation(pin)
+                }
+            })
+            .disposed(by: bag)
+        
+        // add with API
+        search.map { weather -> MKPointAnnotation in
+            let pin = MKPointAnnotation()
+            pin.title = weather.cityName
+            pin.subtitle = "\(weather.temperature) °C - \(weather.humidity) % - \(weather.icon)"
+            pin.coordinate = weather.coordinate
+            
+            return pin
+        }
+        .drive(mapView.rx.pin)
+        .disposed(by: bag)
+
     }
     
     // MARK: - private methods
@@ -275,5 +331,15 @@ extension Reactive where Base: WeatherCityViewController {
         return Binder(self.base) { (vc, value) in
             vc.title = value
         }
+    }
+}
+
+extension WeatherCityViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        pin.animatesDrop = true
+        pin.pinTintColor = .red
+        pin.canShowCallout = true
+        return pin
     }
 }

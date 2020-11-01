@@ -41,6 +41,7 @@
 		9E85ED4624EABA73002EBED8 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E85ED4424EABA73002EBED8 /* AvatarCell.swift */; };
 		9E85ED4724EABA73002EBED8 /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E85ED4524EABA73002EBED8 /* AvatarCell.xib */; };
 		9EBC073124EBBABC007E3937 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC073024EBBABC007E3937 /* RegisterModel.swift */; };
+		9EC254B2254BF88A00664184 /* MKMapView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC254B1254BF88A00664184 /* MKMapView+Rx.swift */; };
 		9EE3D38C24E7D7D900B70216 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3D38A24E7D7D900B70216 /* RegisterViewController.swift */; };
 		9EE3D38D24E7D7D900B70216 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3D38B24E7D7D900B70216 /* RegisterViewController.xib */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		9E85ED4424EABA73002EBED8 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		9E85ED4524EABA73002EBED8 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
 		9EBC073024EBBABC007E3937 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		9EC254B1254BF88A00664184 /* MKMapView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Rx.swift"; sourceTree = "<group>"; };
 		9EE3D38A24E7D7D900B70216 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9EE3D38B24E7D7D900B70216 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		9EF7736A24E250DF00CEFCE9 /* Observables.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observables.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				9E235B752511F55D0019AAE2 /* CLLocationManager+Rx.swift */,
+				9EC254B1254BF88A00664184 /* MKMapView+Rx.swift */,
 			);
 			path = Exts;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				9E235B762511F55D0019AAE2 /* CLLocationManager+Rx.swift in Sources */,
 				9E2B625B24E000F50020698A /* Helper.swift in Sources */,
 				9E1CE21724F651E20096CC1F /* Music.swift in Sources */,
+				9EC254B2254BF88A00664184 /* MKMapView+Rx.swift in Sources */,
 				9E77136C24F8B88D0013E6AE /* CocktailCategory.swift in Sources */,
 				9E2D810924EC197D0035F10B /* BaseViewController.swift in Sources */,
 				9E85ED4624EABA73002EBED8 /* AvatarCell.swift in Sources */,
