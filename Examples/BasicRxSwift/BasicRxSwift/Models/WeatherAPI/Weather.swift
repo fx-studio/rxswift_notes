@@ -26,8 +26,8 @@ struct Weather: Decodable {
     
     static let dummy = Weather(
         cityName: "Fx Studio",
-        temperature: 20,
-        humidity: 90,
+        temperature: 99,
+        humidity: 99,
         icon: iconNameToChar(icon: "01d"),
         coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)
     )
