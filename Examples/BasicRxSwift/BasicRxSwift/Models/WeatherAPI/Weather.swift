@@ -45,15 +45,25 @@ struct Weather: Decodable {
     }
     
     init(from decoder: Decoder) throws {
+        // Coding Keys
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        // CityName
         cityName = try values.decode(String.self, forKey: .cityName)
+        
         let info = try values.decode([AdditionalInfo].self, forKey: .weather)
+        // icon
         icon = iconNameToChar(icon: info.first?.icon ?? "")
         
         let mainInfo = try values.nestedContainer(keyedBy: MainKeys.self, forKey: .main)
+        // temp
         temperature = Int(try mainInfo.decode(Double.self, forKey: .temp))
+        // humidity
         humidity = try mainInfo.decode(Int.self, forKey: .humidity)
+        
+        
         let coordinate = try values.decode(Coordinate.self, forKey: .coordinate)
+        // coord
         self.coordinate = CLLocationCoordinate2D(latitude: coordinate.lat, longitude: coordinate.lon)
     }
     

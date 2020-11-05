@@ -68,19 +68,19 @@ class WeatherAPI {
 //                )
         
         // Data with City Name
-        return Observable<Weather>.just(
-            Weather(cityName: city,
-                    temperature: 99,
-                    humidity: 99,
-                    icon: iconNameToChar(icon: "01d"),
-                    coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
-        )
+//        return Observable<Weather>.just(
+//            Weather(cityName: city,
+//                    temperature: 99,
+//                    humidity: 99,
+//                    icon: iconNameToChar(icon: "01d"),
+//                    coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
+//        )
         
-//        return request(pathComponent: "weather", params: [("q", city)])
-//            .map { data in
-//                let decoder = JSONDecoder()
-//                return try decoder.decode(Weather.self, from: data)
-//            }
+        return request(pathComponent: "weather", params: [("q", city)])
+            .map { data in
+                let decoder = JSONDecoder()
+                return try decoder.decode(Weather.self, from: data)
+            }
     }
     
     func currentWeather(at coordinate: CLLocationCoordinate2D) -> Observable<Weather> {
