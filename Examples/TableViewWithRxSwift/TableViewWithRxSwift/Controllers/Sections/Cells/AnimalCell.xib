@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AnimalCell" customModule="TableViewWithRxSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pawprint.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wFx-dg-d6I">
+                        <rect key="frame" x="4" y="2.5" width="40" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="5nf-tJ-rXT"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsP-YQ-OlG">
+                        <rect key="frame" x="52" y="2" width="260" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wFx-dg-d6I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="0ds-Kp-LgZ"/>
+                    <constraint firstAttribute="bottom" secondItem="wFx-dg-d6I" secondAttribute="bottom" constant="2" id="5lc-PB-H7P"/>
+                    <constraint firstItem="wFx-dg-d6I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="72K-cs-fjB"/>
+                    <constraint firstItem="LsP-YQ-OlG" firstAttribute="leading" secondItem="wFx-dg-d6I" secondAttribute="trailing" constant="8" id="Klm-8v-5Om"/>
+                    <constraint firstItem="LsP-YQ-OlG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="S4A-ql-YNX"/>
+                    <constraint firstAttribute="bottom" secondItem="LsP-YQ-OlG" secondAttribute="bottom" constant="2" id="k4A-tL-yx0"/>
+                    <constraint firstAttribute="trailing" secondItem="LsP-YQ-OlG" secondAttribute="trailing" constant="8" id="oKv-vm-2cw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="LsP-YQ-OlG" id="AQ0-KZ-MTL"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pawprint.fill" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

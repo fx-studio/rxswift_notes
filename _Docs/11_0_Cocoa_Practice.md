@@ -25,8 +25,8 @@ Nếu mọi việc đã ổn rồi, thì ...
 
 ## Danh sách
 
-1. Basic TableView
-2. TableView with Sections
+1. [Basic TableView](./11_1_TableView_Basic.md)
+2. [TableView with Section](./11_2_TableView_Sections.md)
 3. RxDataSource & MVVM
 4. Display data from API to TableView
 5. ...

@@ -16,6 +16,15 @@
 		9E0C837627BC9CFE003145FA /* WeatherWithoutStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0C837427BC9CFE003145FA /* WeatherWithoutStatusCell.xib */; };
 		9E0C837A27BD0A6A003145FA /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C837827BD0A6A003145FA /* CitiesViewController.swift */; };
 		9E0C837B27BD0A6A003145FA /* CitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0C837927BD0A6A003145FA /* CitiesViewController.xib */; };
+		9E48843327BF7ECE00DB8391 /* SectionsDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48843127BF7ECE00DB8391 /* SectionsDemoViewController.swift */; };
+		9E48843427BF7ECE00DB8391 /* SectionsDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E48843227BF7ECE00DB8391 /* SectionsDemoViewController.xib */; };
+		9E4ED15327BF9AB3002E9202 /* AnimalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4ED15127BF9AB3002E9202 /* AnimalsViewController.swift */; };
+		9E4ED15427BF9AB3002E9202 /* AnimalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E4ED15227BF9AB3002E9202 /* AnimalsViewController.xib */; };
+		9E4ED15727BF9B32002E9202 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4ED15627BF9B32002E9202 /* Animal.swift */; };
+		9E4ED15B27BF9E60002E9202 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4ED15927BF9E60002E9202 /* AnimalCell.swift */; };
+		9E4ED15C27BF9E60002E9202 /* AnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E4ED15A27BF9E60002E9202 /* AnimalCell.xib */; };
+		9E4ED15E27BFA09A002E9202 /* AnimalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4ED15D27BFA09A002E9202 /* AnimalHeader.swift */; };
+		9E4ED16027BFA0A9002E9202 /* AnimalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E4ED15F27BFA0A9002E9202 /* AnimalHeader.xib */; };
 		9EAA34F927BA33A300D76220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA34F827BA33A300D76220 /* AppDelegate.swift */; };
 		9EAA34FB27BA33A300D76220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA34FA27BA33A300D76220 /* SceneDelegate.swift */; };
 		9EAA350227BA33A400D76220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA350127BA33A400D76220 /* Assets.xcassets */; };
@@ -35,6 +44,15 @@
 		9E0C837427BC9CFE003145FA /* WeatherWithoutStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherWithoutStatusCell.xib; sourceTree = "<group>"; };
 		9E0C837827BD0A6A003145FA /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		9E0C837927BD0A6A003145FA /* CitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesViewController.xib; sourceTree = "<group>"; };
+		9E48843127BF7ECE00DB8391 /* SectionsDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsDemoViewController.swift; sourceTree = "<group>"; };
+		9E48843227BF7ECE00DB8391 /* SectionsDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsDemoViewController.xib; sourceTree = "<group>"; };
+		9E4ED15127BF9AB3002E9202 /* AnimalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewController.swift; sourceTree = "<group>"; };
+		9E4ED15227BF9AB3002E9202 /* AnimalsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalsViewController.xib; sourceTree = "<group>"; };
+		9E4ED15627BF9B32002E9202 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		9E4ED15927BF9E60002E9202 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		9E4ED15A27BF9E60002E9202 /* AnimalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCell.xib; sourceTree = "<group>"; };
+		9E4ED15D27BFA09A002E9202 /* AnimalHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalHeader.swift; sourceTree = "<group>"; };
+		9E4ED15F27BFA0A9002E9202 /* AnimalHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalHeader.xib; sourceTree = "<group>"; };
 		9EAA34F527BA33A300D76220 /* TableViewWithRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewWithRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAA34F827BA33A300D76220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EAA34FA27BA33A300D76220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +124,47 @@
 			path = CitiesVC;
 			sourceTree = "<group>";
 		};
+		9E48843027BF7E8D00DB8391 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				9E4ED15827BF9E40002E9202 /* Cells */,
+				9E48843127BF7ECE00DB8391 /* SectionsDemoViewController.swift */,
+				9E48843227BF7ECE00DB8391 /* SectionsDemoViewController.xib */,
+				9E4ED15127BF9AB3002E9202 /* AnimalsViewController.swift */,
+				9E4ED15227BF9AB3002E9202 /* AnimalsViewController.xib */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		9E4ED15027BF9A1F002E9202 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				9E0C837727BD0A0F003145FA /* CitiesVC */,
+				9E0C836927BC94FB003145FA /* WeathersVC */,
+				9E0C836827BC94EE003145FA /* HomeVC */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		9E4ED15527BF9B1C002E9202 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E4ED15627BF9B32002E9202 /* Animal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9E4ED15827BF9E40002E9202 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9E4ED15927BF9E60002E9202 /* AnimalCell.swift */,
+				9E4ED15A27BF9E60002E9202 /* AnimalCell.xib */,
+				9E4ED15D27BFA09A002E9202 /* AnimalHeader.swift */,
+				9E4ED15F27BFA0A9002E9202 /* AnimalHeader.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9EAA34EC27BA33A300D76220 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				9EAA351227BA351F00D76220 /* AppDelegate */,
+				9E4ED15527BF9B1C002E9202 /* Models */,
 				9EAA350D27BA343E00D76220 /* Controllers */,
 				9EAA350C27BA343500D76220 /* Resources */,
 				9EAA350327BA33A400D76220 /* LaunchScreen.storyboard */,
@@ -147,9 +207,8 @@
 		9EAA350D27BA343E00D76220 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E0C837727BD0A0F003145FA /* CitiesVC */,
-				9E0C836927BC94FB003145FA /* WeathersVC */,
-				9E0C836827BC94EE003145FA /* HomeVC */,
+				9E4ED15027BF9A1F002E9202 /* Basic */,
+				9E48843027BF7E8D00DB8391 /* Sections */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,8 +293,12 @@
 				9EAA350527BA33A400D76220 /* LaunchScreen.storyboard in Resources */,
 				9E0C836D27BC9515003145FA /* WeathersViewController.xib in Resources */,
 				9EAA350227BA33A400D76220 /* Assets.xcassets in Resources */,
+				9E48843427BF7ECE00DB8391 /* SectionsDemoViewController.xib in Resources */,
+				9E4ED16027BFA0A9002E9202 /* AnimalHeader.xib in Resources */,
 				9EAA351127BA351900D76220 /* HomeViewController.xib in Resources */,
+				9E4ED15427BF9AB3002E9202 /* AnimalsViewController.xib in Resources */,
 				9E0C837227BC9597003145FA /* WeatherCell.xib in Resources */,
+				9E4ED15C27BF9E60002E9202 /* AnimalCell.xib in Resources */,
 				9E0C837627BC9CFE003145FA /* WeatherWithoutStatusCell.xib in Resources */,
 				9E0C837B27BD0A6A003145FA /* CitiesViewController.xib in Resources */,
 			);
@@ -292,11 +355,16 @@
 			files = (
 				9EAA34F927BA33A300D76220 /* AppDelegate.swift in Sources */,
 				9E0C837527BC9CFE003145FA /* WeatherWithoutStatusCell.swift in Sources */,
+				9E4ED15327BF9AB3002E9202 /* AnimalsViewController.swift in Sources */,
 				9E0C836C27BC9515003145FA /* WeathersViewController.swift in Sources */,
+				9E4ED15E27BFA09A002E9202 /* AnimalHeader.swift in Sources */,
 				9E0C837127BC9597003145FA /* WeatherCell.swift in Sources */,
 				9EAA34FB27BA33A300D76220 /* SceneDelegate.swift in Sources */,
 				9E0C837A27BD0A6A003145FA /* CitiesViewController.swift in Sources */,
+				9E48843327BF7ECE00DB8391 /* SectionsDemoViewController.swift in Sources */,
 				9EAA351027BA351900D76220 /* HomeViewController.swift in Sources */,
+				9E4ED15727BF9B32002E9202 /* Animal.swift in Sources */,
+				9E4ED15B27BF9E60002E9202 /* AnimalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

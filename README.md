@@ -53,7 +53,8 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 #### **Phần 4 : [Cocoa Practices](./_Docs/11_0_Cocoa_Practice.md)**
 
 1. [Basic TableView](./_Docs/11_1_TableView_Basic.md)
-2. ...
+2. [TableView with Section](./_Docs/11_2_TableView_Sections.md)
+3. ...
 
 ---
 
