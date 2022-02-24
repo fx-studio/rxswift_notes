@@ -54,7 +54,8 @@ Nếu bạn có thời gian, hãy ghé sang trang blog của mình. Hi vọng c�
 
 1. [Basic TableView](./_Docs/11_1_TableView_Basic.md)
 2. [TableView with Section](./_Docs/11_2_TableView_Sections.md)
-3. ...
+3. [Dynamic TableView](./_Docs/11_3_TableView_Dynamic.md)
+4. ...
 
 ---
 

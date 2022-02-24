@@ -31,6 +31,11 @@
 		9EAA350527BA33A400D76220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA350327BA33A400D76220 /* LaunchScreen.storyboard */; };
 		9EAA351027BA351900D76220 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA350E27BA351900D76220 /* HomeViewController.swift */; };
 		9EAA351127BA351900D76220 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA350F27BA351900D76220 /* HomeViewController.xib */; };
+		9EDFE91B27C47FB60081B386 /* DynamicTableViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFE91927C47FB60081B386 /* DynamicTableViewDemoViewController.swift */; };
+		9EDFE91C27C47FB60081B386 /* DynamicTableViewDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDFE91A27C47FB60081B386 /* DynamicTableViewDemoViewController.xib */; };
+		9EDFE91E27C481FC0081B386 /* ColorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFE91D27C481FC0081B386 /* ColorItem.swift */; };
+		9EDFE92227C485490081B386 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFE92027C485490081B386 /* ColorCell.swift */; };
+		9EDFE92327C485490081B386 /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDFE92127C485490081B386 /* ColorCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +66,11 @@
 		9EAA350627BA33A400D76220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EAA350E27BA351900D76220 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9EAA350F27BA351900D76220 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		9EDFE91927C47FB60081B386 /* DynamicTableViewDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableViewDemoViewController.swift; sourceTree = "<group>"; };
+		9EDFE91A27C47FB60081B386 /* DynamicTableViewDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicTableViewDemoViewController.xib; sourceTree = "<group>"; };
+		9EDFE91D27C481FC0081B386 /* ColorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItem.swift; sourceTree = "<group>"; };
+		9EDFE92027C485490081B386 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		9EDFE92127C485490081B386 /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
 		A2D06F3AD8536B9F76F79DB3 /* Pods_TableViewWithRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableViewWithRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9E4ED15627BF9B32002E9202 /* Animal.swift */,
+				9EDFE91D27C481FC0081B386 /* ColorItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 		9EAA350D27BA343E00D76220 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9EDFE91827C47E7A0081B386 /* Dynamic */,
 				9E4ED15027BF9A1F002E9202 /* Basic */,
 				9E48843027BF7E8D00DB8391 /* Sections */,
 			);
@@ -220,6 +232,25 @@
 				9EAA34FA27BA33A300D76220 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		9EDFE91827C47E7A0081B386 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				9EDFE91F27C485280081B386 /* Cells */,
+				9EDFE91927C47FB60081B386 /* DynamicTableViewDemoViewController.swift */,
+				9EDFE91A27C47FB60081B386 /* DynamicTableViewDemoViewController.xib */,
+			);
+			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		9EDFE91F27C485280081B386 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9EDFE92027C485490081B386 /* ColorCell.swift */,
+				9EDFE92127C485490081B386 /* ColorCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B0B4AA326003A2F37F668B49 /* Frameworks */ = {
@@ -297,10 +328,12 @@
 				9E4ED16027BFA0A9002E9202 /* AnimalHeader.xib in Resources */,
 				9EAA351127BA351900D76220 /* HomeViewController.xib in Resources */,
 				9E4ED15427BF9AB3002E9202 /* AnimalsViewController.xib in Resources */,
+				9EDFE92327C485490081B386 /* ColorCell.xib in Resources */,
 				9E0C837227BC9597003145FA /* WeatherCell.xib in Resources */,
 				9E4ED15C27BF9E60002E9202 /* AnimalCell.xib in Resources */,
 				9E0C837627BC9CFE003145FA /* WeatherWithoutStatusCell.xib in Resources */,
 				9E0C837B27BD0A6A003145FA /* CitiesViewController.xib in Resources */,
+				9EDFE91C27C47FB60081B386 /* DynamicTableViewDemoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,13 +388,16 @@
 			files = (
 				9EAA34F927BA33A300D76220 /* AppDelegate.swift in Sources */,
 				9E0C837527BC9CFE003145FA /* WeatherWithoutStatusCell.swift in Sources */,
+				9EDFE91E27C481FC0081B386 /* ColorItem.swift in Sources */,
 				9E4ED15327BF9AB3002E9202 /* AnimalsViewController.swift in Sources */,
 				9E0C836C27BC9515003145FA /* WeathersViewController.swift in Sources */,
 				9E4ED15E27BFA09A002E9202 /* AnimalHeader.swift in Sources */,
 				9E0C837127BC9597003145FA /* WeatherCell.swift in Sources */,
 				9EAA34FB27BA33A300D76220 /* SceneDelegate.swift in Sources */,
+				9EDFE92227C485490081B386 /* ColorCell.swift in Sources */,
 				9E0C837A27BD0A6A003145FA /* CitiesViewController.swift in Sources */,
 				9E48843327BF7ECE00DB8391 /* SectionsDemoViewController.swift in Sources */,
+				9EDFE91B27C47FB60081B386 /* DynamicTableViewDemoViewController.swift in Sources */,
 				9EAA351027BA351900D76220 /* HomeViewController.swift in Sources */,
 				9E4ED15727BF9B32002E9202 /* Animal.swift in Sources */,
 				9E4ED15B27BF9E60002E9202 /* AnimalCell.swift in Sources */,

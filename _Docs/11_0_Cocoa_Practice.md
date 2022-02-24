@@ -27,9 +27,10 @@ Nếu mọi việc đã ổn rồi, thì ...
 
 1. [Basic TableView](./11_1_TableView_Basic.md)
 2. [TableView with Section](./11_2_TableView_Sections.md)
-3. RxDataSource & MVVM
-4. Display data from API to TableView
-5. ...
+3. [Dynamic TableView](./11_3_TableView_Dynamic.md)
+4. RxDataSource & MVVM
+5. Display data from API to TableView
+6. ...
 
 ---
 
